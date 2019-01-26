@@ -92,6 +92,5 @@ function pushDataSnake(w, h) {
     console.log(arr);
     return arr;
 }
-
 pushDataSnake(4, 6);
 
