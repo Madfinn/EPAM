@@ -363,7 +363,7 @@ function renderMenuItem(arr) {
         arr[i].consist.forEach(function (element) {
             let ingredientWrap = document.createElement("div");
             let inputNum = document.createElement("input");
-            setAttributes(inputNum, {"class": "counter", "type": "number", "name": element, "value": 1});
+            setAttributes(inputNum, {"class": "counter", "type": "text", "name": element, "value": 1});
             let label = document.createElement("label");
             pizzaConsist.appendChild(ingredientWrap);
             ingredientWrap.classList.add("ingredientWrap");
