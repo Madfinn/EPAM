@@ -71,7 +71,7 @@ class Pizza {
     };
 
     computedCalories() {
-        let value =80;
+        let value = 80;
         this.consist.forEach(function (item) {
             switch (item) {
                 case 'лимон':
@@ -277,7 +277,9 @@ let listFilterWrap = document.createElement("div");
 let gridFilterWrap = document.createElement("div");
 let filterOption1 = document.createElement("option");
 let filterOption2 = document.createElement("option");
+let filterOption22 = document.createElement("option");
 let filterOption3 = document.createElement("option");
+let filterOption33 = document.createElement("option");
 let gridFilter1 = document.createElement("a");
 let gridFilter2 = document.createElement("a");
 let gridFilter3 = document.createElement("a");
@@ -363,7 +365,7 @@ function renderMenuItem(arr) {
         arr[i].consist.forEach(function (element) {
             let ingredientWrap = document.createElement("div");
             let inputNum = document.createElement("input");
-            setAttributes(inputNum, {"class": "counter", "type": "text", "name": element, "value": 1});
+            setAttributes(inputNum, {"class": "counter", "type": "number", "name": element, "value": 1, "min": 0, "max": 2});
             let label = document.createElement("label");
             pizzaConsist.appendChild(ingredientWrap);
             ingredientWrap.classList.add("ingredientWrap");
@@ -390,12 +392,18 @@ function createFilters() {
         filterOption1.text = "Сортировать по умолчанию";
         filterOption1.value = "default";
         listFilter.add(filterOption1);
-        filterOption2.text = "По цене";
-        filterOption2.value = "price";
+        filterOption2.text = "По цене вверх";
+        filterOption2.value = "priceUp";
         listFilter.add(filterOption2);
-        filterOption3.text = "По названию";
-        filterOption3.value = "name";
+        filterOption22.text = "По цене вниз";
+        filterOption22.value = "priceDown";
+        listFilter.add(filterOption22);
+        filterOption3.text = "По названию вверх";
+        filterOption3.value = "nameUp";
         listFilter.add(filterOption3);
+        filterOption33.text = "По названию вниз";
+        filterOption33.value = "nameDown";
+        listFilter.add(filterOption33);
     }
 
     if (menuWrap.classList.contains("grid")) {
@@ -428,17 +436,31 @@ function createFilters() {
 listFilter.onclick = function (e) {
     let target = e.target;
 
-    if (target.value === "name") {
+    if (target.value === "nameUp") {
         clearMenu();
         let nameArray = [...menu.items];
         nameArray = nameArray.sort(passName);
         renderMenuItem(nameArray);
     }
 
-    if (target.value === "price") {
+    if (target.value === "priceUp") {
         clearMenu();
         let priceArray = [...menu.items];
         priceArray = priceArray.sort(passPrice);
+        renderMenuItem(priceArray);
+    }
+
+    if (target.value === "nameDown") {
+        clearMenu();
+        let nameArray = [...menu.items];
+        nameArray = nameArray.sort(passName).reverse();
+        renderMenuItem(nameArray);
+    }
+
+    if (target.value === "priceDown") {
+        clearMenu();
+        let priceArray = [...menu.items];
+        priceArray = priceArray.sort(passPrice).reverse();
         renderMenuItem(priceArray);
     }
 
@@ -542,9 +564,10 @@ menuWrap.onclick = function(e) {
                 return;
             }
             if (target.classList.contains("counter")) {
-                target.addEventListener("change", function () {
-                    e.target.value = this.value;
-                    let value = e.target.value;
+                console.log(target);
+                target.oninput = function () {
+                    let value = Number(target.value);
+                    console.log(value);
                     let ingredientName = e.target.name;
                     let name = document.getElementsByClassName("pizzaName");
                     while (target != name) {
@@ -552,9 +575,9 @@ menuWrap.onclick = function(e) {
                         let pizzaPrice = target.parentNode.parentNode.nextSibling;
                         let pizzaCalories = target.parentNode.parentNode.nextSibling.nextSibling;
                         console.log(pizzaPrice, pizzaCalories);
-                        return changePizzaConsist(pizzaName, ingredientName, pizzaPrice, pizzaCalories);
+                        return changePizzaConsist(pizzaName, ingredientName, pizzaPrice, pizzaCalories, value);
                     }
-                });
+                };
                 return;
             }
             target = target.parentNode;
@@ -565,11 +588,37 @@ menuWrap.onclick = function(e) {
     }
 };
 
-function changePizzaConsist(pizza, ingredient, price, calories) {
+function changePizzaConsist(pizza, ingredient, price, calories, value) {
     for(let i = 0; i < menu.items.length; i++) {
         if (menu.items[i].name === pizza) {
             let consist = menu.items[i].consist;
-            consist.push(ingredient);
+            if(value === 0) {
+                while (consist.includes(ingredient)) {
+                    let ingredientIndex = consist.indexOf(ingredient);
+                    console.log("ingredientIndex" + ingredientIndex);
+                    consist.splice(ingredientIndex, 1);
+                    console.log(consist);
+                }
+            }
+            if(value === 1) {
+                while (consist.includes(ingredient)) {
+                    let ingredientIndex = consist.indexOf(ingredient);
+                    console.log("ingredientIndex" + ingredientIndex);
+                    consist.splice(ingredientIndex, 1);
+                    console.log(consist);
+                }
+                consist.push(ingredient);
+            }
+            if(value === 2) {
+                while (consist.includes(ingredient)) {
+                    let ingredientIndex = consist.indexOf(ingredient);
+                    console.log("ingredientIndex" + ingredientIndex);
+                    consist.splice(ingredientIndex, 1);
+                    console.log(consist);
+                }
+                consist.push(ingredient);
+                consist.push(ingredient);
+            }
             menu.items[i] = new Pizza(menu.items[i].name, menu.items[i].consist);
             price.innerHTML = menu.items[i]._price + " грн";
             calories.innerHTML = menu.items[i]._calories + " Ккал";
