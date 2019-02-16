@@ -263,7 +263,23 @@ let meatCollection = new Pizza(
  menu.addPizza(vegetarian, fourCheese, seaGifts, dizhon, european, meatBoom, margarita, hunterPizza,
      palermo, pepperoni, tropikano, meatCollection);
 
- //render
+class Basket {
+    constructor() {
+        this.items = [];
+        this.price = this.countPrice() + " Грн";
+    }
+
+    countPrice() {
+        let value = 0;
+        for (let i = 0; i < this.items.length; i++) {
+            value += this.items[i]._price;
+        }
+        return value;
+    }
+}
+
+let basket = new Basket;
+
 let header = document.createElement("h1");
 header.innerHTML = "Pizza Menu";
 let listBtn = document.createElement("button");
@@ -290,7 +306,31 @@ let gridFilter7 = document.createElement("a");
 let gridFilter8 = document.createElement("a");
 let gridFilter9 = document.createElement("a");
 let gridFilter10 = document.createElement("a");
+let newPizzaWrap = document.createElement("article");
+let createPizzaWrap = document.createElement("div");
+let createPizza = document.createElement("a");
+let countBtn = document.createElement("button");
+let priceBlock = document.createElement("div");
+let pizzaPrice = document.createElement("div");
+let pizzaCalories = document.createElement("div");
 
+let form = document.createElement("form");
+let newPizzaInput = document.createElement("input");
+let pizzaText1 = document.createElement("p");
+let pizzaText2 = document.createElement("p");
+let pizzaImg = document.createElement("img");
+let pizzaImgWrap = document.createElement("div");
+let buyBtn = document.createElement("button");
+
+let newPizzaName, newPizzaConsist, newPizza;
+//create basket
+let shopIcon = document.createElement("img");
+let shopInfo = document.createElement("div");
+shopInfo.classList.add("shopInfo");
+shopInfo.innerHTML = basket.items.length;
+shopIcon.setAttribute("src", "img/shop.svg");
+shopIcon.classList.add("shop");
+let basketPizza = [];
 
 setAttributes(gridFilter1, {"class": "filterItem", "href": "#", "data-value": "Перец болгарский"});
 setAttributes(gridFilter2, {"class": "filterItem", "href": "#", "data-value": "Помидор"});
@@ -302,16 +342,18 @@ setAttributes(gridFilter7, {"class": "filterItem", "href": "#", "data-value": "�
 setAttributes(gridFilter8, {"class": "filterItem", "href": "#", "data-value": "Куриное филе"});
 setAttributes(gridFilter9, {"class": "filterItem", "href": "#", "data-value": "Буженина"});
 setAttributes(gridFilter10, {"class": "filterItem", "href": "#", "data-value": "Бекон"});
-
+setAttributes(createPizza, {"class": "createPizza", "href": "#"});
 
 document.body.appendChild(header);
 document.body.appendChild(btnWrap);
 btnWrap.appendChild(listBtn);
 btnWrap.appendChild(gridBtn);
-
+document.body.appendChild(shopIcon);
+document.body.appendChild(shopInfo);
 
 listBtn.addEventListener("click", function () {
     removeElement(gridFilterWrap);
+    removeElement(createPizza);
     menuWrap.classList.remove("grid");
     menuWrap.classList.add("list");
     clearMenu();
@@ -341,6 +383,10 @@ function renderMenuItem(arr) {
         let pizzaPrice = document.createElement("div");
         let pizzaConsist = document.createElement("div");
         let pizzaCalories = document.createElement("div");
+        //buy btn
+        let buyBtn = document.createElement("button");
+        buyBtn.classList.add("buyBtn");
+        buyBtn.innerHTML = "Купить";
 
         menuWrap.appendChild(menuItem);
         menuItem.classList.add("menuItem");
@@ -372,10 +418,10 @@ function renderMenuItem(arr) {
             ingredientWrap.appendChild(inputNum);
             ingredientWrap.appendChild(label);
             label.innerHTML = element;
-            //arr[i].consist.join(', ');
         });
         pizzaDescr.appendChild(pizzaPrice);
         pizzaPrice.classList.add("pizzaPrice");
+        pizzaDescr.appendChild(buyBtn);
         pizzaPrice.innerHTML = arr[i]._price + " грн";
         pizzaDescr.appendChild(pizzaCalories);
         pizzaCalories.classList.add("pizzaCalories");
@@ -429,6 +475,10 @@ function createFilters() {
         gridFilter9.innerHTML = "Буженина";
         gridFilterWrap.appendChild(gridFilter10);
         gridFilter10.innerHTML = "Бекон";
+        document.body.insertBefore(createPizzaWrap, document.body.childNodes[6]);
+        createPizzaWrap.classList.add("createPizzaWrap");
+        createPizzaWrap.appendChild(createPizza);
+        createPizza.innerHTML = "Добавить пиццу";
     }
 }
 
@@ -471,7 +521,6 @@ listFilter.onclick = function (e) {
 };
 
 gridFilterWrap.onclick = function (e) {
-    e.preventDefault();
     e.preventDefault();
     let target = e.target;
     switch (target.getAttribute("data-value")) {
@@ -556,25 +605,51 @@ gridFilterWrap.onclick = function (e) {
 
 menuWrap.onclick = function(e) {
     let target = e.target;
+
+    if (target.classList.contains("buyBtn")) {
+        if (target.parentNode.parentNode.classList.contains("menuItemNew")) {
+            let pizzaName = target.parentNode.parentNode.childNodes[1].childNodes[1].value;
+            basket.items.push(newPizza);
+            shopInfo.innerHTML = basket.items.length;
+            basketPizza.push(pizzaName);
+            localStorage.setItem("В корзине:", JSON.stringify(basketPizza));
+            localStorage.setItem("Стоимость:", JSON.stringify(basket.countPrice() + " грн"));
+            return;
+        } else {
+            let pizzaName = target.parentNode.firstChild.textContent;
+            for (let i = 0; i < menu.items.length; i++) {
+                if (menu.items[i].name === pizzaName) {
+                    basket.items.push(menu.items[i]);
+                    shopInfo.innerHTML = basket.items.length;
+                    basketPizza.push(pizzaName);
+                }
+            }
+            localStorage.setItem("В корзине:", JSON.stringify(basketPizza));
+            localStorage.setItem("Стоимость:", JSON.stringify(basket.countPrice() + " грн"));
+            return;
+        }
+    }
+
     if (menuWrap.classList.contains("grid")) {
 
         while (target != menuWrap) {
+            if (target.classList.contains("new")) {
+                return;
+            }
             if (target.classList.contains("menuItem")) {
                 showImg(target);
                 return;
             }
+
             if (target.classList.contains("counter")) {
-                console.log(target);
                 target.oninput = function () {
                     let value = Number(target.value);
-                    console.log(value);
                     let ingredientName = e.target.name;
                     let name = document.getElementsByClassName("pizzaName");
                     while (target != name) {
                         let pizzaName = target.parentNode.parentNode.previousSibling.textContent;
                         let pizzaPrice = target.parentNode.parentNode.nextSibling;
-                        let pizzaCalories = target.parentNode.parentNode.nextSibling.nextSibling;
-                        console.log(pizzaPrice, pizzaCalories);
+                        let pizzaCalories = target.parentNode.parentNode.nextSibling.nextSibling.nextSibling;
                         return changePizzaConsist(pizzaName, ingredientName, pizzaPrice, pizzaCalories, value);
                     }
                 };
@@ -595,26 +670,20 @@ function changePizzaConsist(pizza, ingredient, price, calories, value) {
             if(value === 0) {
                 while (consist.includes(ingredient)) {
                     let ingredientIndex = consist.indexOf(ingredient);
-                    console.log("ingredientIndex" + ingredientIndex);
                     consist.splice(ingredientIndex, 1);
-                    console.log(consist);
                 }
             }
             if(value === 1) {
                 while (consist.includes(ingredient)) {
                     let ingredientIndex = consist.indexOf(ingredient);
-                    console.log("ingredientIndex" + ingredientIndex);
                     consist.splice(ingredientIndex, 1);
-                    console.log(consist);
                 }
                 consist.push(ingredient);
             }
             if(value === 2) {
                 while (consist.includes(ingredient)) {
                     let ingredientIndex = consist.indexOf(ingredient);
-                    console.log("ingredientIndex" + ingredientIndex);
                     consist.splice(ingredientIndex, 1);
-                    console.log(consist);
                 }
                 consist.push(ingredient);
                 consist.push(ingredient);
@@ -625,6 +694,97 @@ function changePizzaConsist(pizza, ingredient, price, calories, value) {
             return;
         }
     }
+};
+
+createPizza.onclick = function (e) {
+    e.preventDefault();
+    let menuWrap = document.querySelector(".menuWrap");
+    if (menuWrap.childNodes[0].classList.contains("menuItemNew")){
+        return;
+    }
+    menuWrap.insertBefore(newPizzaWrap, menuWrap.childNodes[0]);
+    newPizzaWrap.classList.add("menuItemNew");
+    form.classList.add("pizzaForm");
+    setAttributes(newPizzaInput, {"class": "newPizzaName", "type": "text", "name": "pizzaName"});
+    buyBtn.classList.add("buyBtn");
+    buyBtn.innerHTML = "Купить";
+    pizzaImgWrap.classList.add("pizzaImgWrap");
+    pizzaText1.classList.add("pizzaText");
+    pizzaText2.classList.add("pizzaText");
+    newPizzaWrap.appendChild(pizzaImgWrap);
+    pizzaImgWrap.appendChild(pizzaImg);
+    pizzaImg.setAttribute("src", "img/pizza-piece.png");
+    newPizzaWrap.appendChild(form);
+    form.appendChild(pizzaText1);
+    pizzaText1.innerHTML = "Название пиццы";
+    form.appendChild(newPizzaInput);
+    form.appendChild(pizzaText2);
+    pizzaText2.innerHTML = "Выберите игридиенты:";
+    renderIngredientItem("филе куриное", form);
+    renderIngredientItem("копченая курица", form);
+    renderIngredientItem("охотничьи колбаски", form);
+    renderIngredientItem("салями", form);
+    renderIngredientItem("буженина", form);
+    renderIngredientItem("мидии", form);
+    renderIngredientItem("кальмары", form);
+    renderIngredientItem("ветчина", form);
+    renderIngredientItem("моцарелла", form);
+    renderIngredientItem("дор блю", form);
+    renderIngredientItem("сыр пармезан", form);
+    renderIngredientItem("лосось", form);
+    renderIngredientItem("помидор", form);
+    renderIngredientItem("кукуруза", form);
+    renderIngredientItem("грибы", form);
+    renderIngredientItem("корнишоны", form);
+    renderIngredientItem("перец болгарский", form);
+    renderIngredientItem("спаржа", form);
+    renderIngredientItem("ананас", form);
+    renderIngredientItem("бекон", form);
+    renderIngredientItem("оливки", form);
+    renderIngredientItem("маслины", form);
+    renderIngredientItem("соус томатный", form);
+    renderIngredientItem("соус бешамель", form);
+    renderIngredientItem("соус песто", form);
+    countBtn.classList.add("count");
+    countBtn.innerHTML = "Узнать цену";
+    form.appendChild(countBtn);
+    form.appendChild(priceBlock);
+    priceBlock.classList.add("priceBlock");
+    pizzaPrice.classList.add("pizzaPrice");
+    newPizzaWrap.appendChild(priceBlock);
+    pizzaCalories.classList.add("pizzaCalories");
+    priceBlock.appendChild(pizzaPrice);
+    priceBlock.appendChild(buyBtn);
+    priceBlock.appendChild(pizzaCalories);
+};
+
+newPizzaWrap.onclick = function(e) {
+    let target = e.target;
+    if (target.classList.contains("checkbox")) {
+        target.setAttribute("checked", "checked");
+        if (target.checked) {
+            target.setAttribute("checked", "checked");
+        } else {
+            target.removeAttribute("checked");
+        }
+    }
+};
+
+countBtn.onclick = function (e) {
+    e.preventDefault();
+    priceBlock.classList.add("show");
+    newPizzaName = document.querySelector(".newPizzaName");
+    newPizzaConsist = [];
+    let ingredient = document.querySelectorAll(".menuItemNew .checkbox");
+    for (let i = 0; i < ingredient.length; i++) {
+        if(ingredient[i].checked) {
+            newPizzaConsist.push(ingredient[i].name);
+        }
+    }
+    newPizza = new Pizza(newPizzaName.value, newPizzaConsist);
+    pizzaPrice.innerHTML = newPizza._price + " грн";
+    pizzaCalories.innerHTML = newPizza._calories + " Ккал";
+    return newPizza;
 };
 
 //additional functions
@@ -682,3 +842,17 @@ function setAttributes(element, options) {
 function filterByIngredients(parameter) {
     return menu.items.includes(parameter);
 }
+
+function renderIngredientItem(name, wrap) {
+    let ingredient1 = document.createElement("div");
+    ingredient1.classList.add("ingredientWrap");
+    let ingredient1Name = document.createElement("div");
+    ingredient1Name.classList.add("ingredientName");
+    let checkbox1 = document.createElement("input");
+    wrap.appendChild(ingredient1);
+    ingredient1.appendChild(checkbox1);
+    ingredient1.appendChild(ingredient1Name);
+    setAttributes(checkbox1, {"class": "checkbox", "type": "checkbox", "name": name});
+    ingredient1Name.innerHTML = checkbox1.name;
+}
+

@@ -47,14 +47,22 @@ h1 + div button:first-child {
     color: #FDE09B;
 }
 
-.pizzaPrice {
+.pizzaPrice,
+.buyBtn,
+.menuItemNew .count {
+    outline: none;
+    border: none;
     background-color: #A40A0A;
     color: #FFFBF9;
     display: inline-block;
     border-radius: 5px;
     padding: 10px 15px;
     box-shadow: 0 2px 4px 5px rgba(0,0,0,0.10);
-    font: 600 18px 'Montserrat', sans-serif;
+    font: 600 14px 'Montserrat', sans-serif;
+}
+
+.menuItemNew .count {
+    border: 2px solid #A40A0A;
 }
 
 .pizzaConsist {
@@ -85,19 +93,29 @@ h1 + div button:first-child {
     flex-direction: column;
 }
 
+.menuWrap.list .buyBtn {
+    margin-left: 30px;
+}
+
+.menuWrap.grid .buyBtn {
+    margin-left: 50px;
+}
+
 .menuItem {
     display: flex;
     align-items: center;
     padding: 15px 40px;
 }
 
-.menuWrap.list .pizzaImgWrap{
+.menuWrap.list .pizzaImgWrap,
+.menuItemNew .pizzaImgWrap {
     width: 200px;
-    height: 50px;
+    height: auto;
     margin-right: 30px;
 }
 
-.menuWrap.list .pizzaImgWrap img{
+.menuWrap.list .pizzaImgWrap img,
+.menuItemNew .pizzaImgWrap img {
     width: 100%;
     height: auto;
 }
@@ -118,7 +136,8 @@ h1 + div button:first-child {
     margin-top: 10px;
 }
 
-.menuWrap.grid .menuItem {
+.menuWrap.grid .menuItem,
+.menuWrap.grid .menuItemNew {
     background-image: url("img/item.png");
     display: flex;
     flex-direction: column;
@@ -159,7 +178,30 @@ h1 + div button:first-child {
     box-shadow: 0 2px 4px 5px rgba(0,0,0,0.10);
     margin-right: 15px;
     margin-bottom: 30px;
+}
 
+.createPizzaWrap {
+    text-align: center;
+}
+
+.createPizza {
+    display: inline-block;
+    margin-bottom: 15px;
+    background-color: #A40A0A;
+    font-size: 15px;
+    font-weight: 600;
+    color: #FFFBF9;
+    padding: 10px 15px;
+    border: 2px solid #A40A0A;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 5px rgba(0,0,0,0.10);
+}
+
+.createPizza:hover,
+.createPizza:link,
+.createPizza:active,
+.createPizza:visited {
+    color: #FFFBF9;
 }
 
 .menuWrap.grid .pizzaConsist {
@@ -200,4 +242,79 @@ h1 + div button:first-child {
     margin-right: 10px;
     font: 600 14px 'Montserrat', sans-serif;
     color: #A40A0A;
+}
+.menuItemNew .pizzaText {
+    font: 400 16px 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+.menuItemNew .pizzaImgWrap{
+    margin-bottom: 15px;
+}
+
+.menuItemNew .newPizzaName,
+.menuItemNew .newPizzaName:focus {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #FDE09B;
+    border-radius: 5px;
+    border: 2px solid #A40A0A;
+    padding: 7px 10px;
+    font: 25px 'Ruslan Display', cursive;
+    text-transform: capitalize;
+    color: #A40A0A;
+    box-shadow: 0 2px 4px 5px rgba(0,0,0,0.10);
+    outline: none;
+}
+
+.menuItemNew .ingredientName {
+    font: 700 16px 'Montserrat', sans-serif;
+    color: #fff;
+    padding-left: 10px;
+}
+
+.menuItemNew .priceBlock {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.menuItemNew .count {
+    margin-top: 20px;
+}
+
+.menuItemNew .priceBlock {
+    opacity: 0;
+}
+
+.menuItemNew .priceBlock.show {
+    transition: opacity .3s ease;
+    opacity: 1;
+}
+
+.shop {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 55px;
+    height: auto;
+}
+
+.shopInfo {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FDE09B;
+    color: #A40A0A;
+    font: 700 16px 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 52px;
+    top: 33px;
 }
