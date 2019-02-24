@@ -106,7 +106,7 @@ let animationTimer = setInterval(function (){
 
     for (let i = 0; i <= circles.length - 1; i++) {
         drawCircle(circles[i]);
-        if (circles[i].startX - circles[i].radius < 0 &&
+        if (circles[i].startX + circles[i].radius < 0 &&
             circles[i].dx < 0) {
             circles[i].dx = -circles[i].dx;
         }
@@ -155,4 +155,4 @@ let animationTimer = setInterval(function (){
         squares[j].startX += squares[j].dx;
         squares[j].startY += squares[j].dy;
     }
-},120);
+},150);

@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    src: url('../fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    src: url('../fonts/Open_Sans/OpenSans-Bold.ttf')  format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    src: url('../fonts/Roboto/Roboto-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    src: url('../fonts/Roboto/Roboto-Bold.ttf')  format('truetype');
+}
+
+@font-face {
+    font-family: 'Crimson';
+    font-weight: 400;
+    font-style: italic;
+    src: url('../fonts/Crimson_Text/CrimsonText-Italic.ttf')  format('truetype');
+}
+
+@font-face {
+    font-family: 'Crimson';
+    font-weight: 700;
+    font-style: italic;
+    src: url('../fonts/Crimson_Text/CrimsonText-BoldItalic.ttf')  format('truetype');
+}
+
