@@ -13,249 +13,352 @@
     <script defer src="js/script.js"></script>
 </head>
 <body>
-<header class="header">
-    <div class="container">
-        <div class="header__top">
-            <a href="#" class="header__title">Template</a>
-            <div class="header__info">
-                <div class="header__wrapEmail">
-                    <a href="#" class="header__link">
-                        Email sing up
-                    </a>
-                </div>
-                <div class="header__wrapBag">
-                    <a href="#" class="header__link">
-                        <img src="img/icons/shoppingBag.svg" class="header__bagIcon" alt="shopping bag">
-                        Bag (<span class="header__bagItems">0</span>)
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="header__nav">
-            <nav class="menu">
-                <a href="#" class="menu__link">Women</a>
-                <a href="#" class="menu__link">Men</a>
-                <a href="#" class="menu__link">Handbags</a>
-                <a href="#" class="menu__link">Accessories</a>
-                <a href="#" class="menu__link">Sale</a>
-                <a href="#" class="menu__link">New Arrivals</a>
-                <a href="#" class="menu__link">Clearance</a>
-                <a href="#" class="menu__link">Store Locator</a>
-            </nav>
-            <div class="search" id="search">
-                <input type="text" class="search__field" placeholder="Style Name">
-            </div>
-            <img src="img/icons/search.svg" alt="search" class="search__icon" id="searchGlass">
-        </div>
-    </div>
-</header>
-<header class="headerMobile">
-    <div class="container">
-        <div class="headerMobile__top">
-            <a href="#" class="headerMobile__title">TL</a>
-            <div class="headerMobile__info">
-                <div class="headerMobile__wrapBag">
-                    <a href="#" class="headerMobile__link">
-                        <img src="img/icons/shoppingBag.svg" class="header__bagIcon" alt="shopping bag">
-                        Bag (<span class="headerMobile__bagItems">0</span>)
-                    </a>
-                </div>
-                <div class="headerMobile__wrapMenu">
-                    <a href="#" class="headerMobile__hamburger" id="hamburger">
-                        <img src="img/icons/hamburger.svg" class="headerMobile__hamburgerIcon" alt="hamburger">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="headerMobile__nav" id="navigationMenu">
-            <nav class="menuMobile">
-                <a href="#" class="menuMobile__link">Women</a>
-                <a href="#" class="menuMobile__link">Men</a>
-                <a href="#" class="menuMobile__link">Handbags</a>
-                <a href="#" class="menuMobile__link">Accessories</a>
-                <a href="#" class="menuMobile__link">Sale</a>
-                <a href="#" class="menuMobile__link">New Arrivals</a>
-                <a href="#" class="menuMobile__link">Clearance</a>
-                <a href="#" class="menuMobile__link">Store Locator</a>
-            </nav>
-            <div class="searchMobile">
-                <input type="text" class="searchMobile__field" placeholder="Style Name">
-                <img src="img/icons/search.svg" alt="search" class="searchMobile__icon" id="searchGlass">
-            </div>
-        </div>
-    </div>
-</header>
-<main class="main">
-    <section class="slider">
-        <div class="slider__block">
-            <img src="img/slider/slider-img.jpg" class="slider__img" alt="poster">
-        </div>
-        <div class="slider__pagination">
-        </div>
-    </section>
-    <section class="sliderTablet">
-        <div class="sliderTablet__pagination">
-        </div>
-    </section>
-    <section class="categories">
-        <div class="container categories__container flex p-0">
-            <div class="categories__item shoes">
-                <div class="categories__info">
-                    <h2 class="categories__descr">Nike Red</h2>
-                    <div class="categories__extra">New</div>
-                </div>
-            </div>
-            <div class="categories__item caps">
-                <div class="categories__info">
-                    <h2 class="categories__descr">Caps & Hats</h2>
-                    <div class="categories__extra">Sale -50%</div>
-                </div>
-            </div>
-            <div class="categories__item bags">
-                <div class="categories__info">
-                    <h2 class="categories__descr red">Sale</h2>
-                    <div class="categories__extra">-70%</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="arrival">
+    <header class="header">
         <div class="container">
-            <h1 class="arrival__header">
-                New arrivals
-            </h1>
-            <div class="arrival__wrap">
-                <div class="arrival__item">
-                    <img src="img/arrivals/arrival1.jpg" class="arrival__img" alt="jeans">
-                    <h3 class="arrival__descr">
-                        Straight Leg Jeans
-                    </h3>
-                    <div class="arrival__price">£55.00</div>
-                </div>
-                <div class="arrival__item">
-                    <img src="img/arrivals/arrival2.jpg" class="arrival__img" alt="jeans">
-                    <h3 class="arrival__descr">
-                        Boyfriend T-Shirt with <br> Bohemian Print
-                    </h3>
-                    <div class="arrival__price">£34.25</div>
-                </div>
-                <div class="arrival__item">
-                    <img src="img/arrivals/arrival3.jpg" class="arrival__img" alt="jeans">
-                    <h3 class="arrival__descr">
-                        Only Busted Knee Jean
-                    </h3>
-                    <div class="arrival__price">£140.50</div>
-                </div>
-                <div class="arrival__item">
-                    <img src="img/arrivals/arrival4.jpg" class="arrival__img" alt="jeans">
-                    <h3 class="arrival__descr">
-                        Only Skinny Jeans
-                    </h3>
-                    <div class="arrival__price">£12.75</div>
+            <div class="header__top">
+                <a href="#" class="header__title">Template</a>
+                <div class="header__info">
+                    <div class="header__wrapEmail">
+                        <a href="#" class="header__link">
+                            Email sing up
+                        </a>
+                    </div>
+                    <div class="header__wrapBag">
+                        <a href="#" class="header__link">
+                            <img src="img/icons/shoppingBag.svg" class="header__bagIcon" alt="shopping bag">
+                            Bag (<span class="header__bagItems">0</span>)
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="arrival__bottom">
-                <button class="arrival__button">All arrivals</button>
+            <div class="header__nav">
+                <nav class="menu">
+                    <a href="catalog.html" class="menu__link">Women</a>
+                    <a href="#" class="menu__link">Men</a>
+                    <a href="#" class="menu__link">Handbags</a>
+                    <a href="#" class="menu__link">Accessories</a>
+                    <a href="#" class="menu__link">Sale</a>
+                    <a href="#" class="menu__link">New Arrivals</a>
+                    <a href="#" class="menu__link">Clearance</a>
+                    <a href="#" class="menu__link">Store Locator</a>
+                </nav>
+                <div class="search" id="search">
+                    <input type="text" class="search__field" placeholder="Style Name">
+                </div>
+                <img src="img/icons/search.svg" alt="search" class="search__icon" id="searchGlass">
             </div>
         </div>
-    </section>
-</main>
-<footer class="footer">
-    <div class="container flex">
-        <div class="footer__block flex">
-            <div class="footer__linksBlock">
-                <h4 class="footer__subheader">Quick Links</h4>
-                <ul>
-                    <li class="footer__item">
-                        <a href="#" class="footer__link">Store locator</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="#" class="footer__link">Gift card</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="#" class="footer__link">Size guide</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="#" class="footer__link">About us</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="#" class="footer__link">Support</a>
-                    </li>
-                </ul>
+    </header>
+    <header class="headerMobile">
+        <div class="container">
+            <div class="headerMobile__top">
+                <a href="#" class="headerMobile__title">TL</a>
+                <div class="headerMobile__info">
+                    <div class="headerMobile__wrapBag">
+                        <a href="#" class="headerMobile__link">
+                            <img src="img/icons/shoppingBag.svg" class="header__bagIcon" alt="shopping bag">
+                            Bag (<span class="headerMobile__bagItems">0</span>)
+                        </a>
+                    </div>
+                    <div class="headerMobile__wrapMenu">
+                        <a href="#" class="headerMobile__hamburger" id="hamburger">
+                            <img src="img/icons/hamburger.svg" class="headerMobile__hamburgerIcon" alt="hamburger">
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="footer__linksBlock">
-                <h4 class="footer__subheader">Customer Care</h4>
-                <ul>
-                    <li class="footer__item">
-                        <a href="#" class="footer__link">Customer service</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="#" class="footer__link">Track my order</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="#" class="footer__link">Return policy</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="#" class="footer__link">Shipping & delivery</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="#" class="footer__link">Contact us</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="#" class="footer__link">Careers</a>
-                    </li>
-                </ul>
+            <div class="headerMobile__nav" id="navigationMenu">
+                <nav class="menuMobile">
+                    <a href="catalog.html" class="menuMobile__link">Women</a>
+                    <a href="#" class="menuMobile__link">Men</a>
+                    <a href="#" class="menuMobile__link">Handbags</a>
+                    <a href="#" class="menuMobile__link">Accessories</a>
+                    <a href="#" class="menuMobile__link">Sale</a>
+                    <a href="#" class="menuMobile__link">New Arrivals</a>
+                    <a href="#" class="menuMobile__link">Clearance</a>
+                    <a href="#" class="menuMobile__link">Store Locator</a>
+                </nav>
+                <div class="searchMobile">
+                    <input type="text" class="searchMobile__field" placeholder="Style Name">
+                    <img src="img/icons/search.svg" alt="search" class="searchMobile__icon" id="searchGlass">
+                </div>
             </div>
         </div>
-        <div class="footer__block">
-            <div class="footer__socialsBlock flex">
-                <div class="footer__questions">
-                    <h4 class="footer__socialsSubheader">Questions</h4>
-                    <div class="footer__socialsInfo twitter">
-                        <img src="img/icons/twitter.svg" class="footer__socialsIcon" alt="twitter">
-                        <div>
-                            Tweet us
-                            <a href="https://twitter.com/intent/tweet?screen_name=@template" target="_blank" class="footer__twitterLink">@template</a>
+    </header>
+    <main class="main">
+        <section class="slider">
+            <div class="slider__block">
+                <img src="img/slider/slide1.jpg" class="slider__img" alt="poster">
+            </div>
+            <div class="slider__pagination">
+            </div>
+        </section>
+        <section class="sliderTablet">
+            <div class="sliderTablet__pagination">
+            </div>
+        </section>
+        <section class="categories">
+            <div class="container categories__container flex p-0">
+                <div class="categories__item shoes">
+                    <div class="categories__info">
+                        <h2 class="categories__descr">Nike Red</h2>
+                        <div class="categories__extra">New</div>
+                    </div>
+                </div>
+                <div class="categories__item caps">
+                    <div class="categories__info">
+                        <h2 class="categories__descr">Caps & Hats</h2>
+                        <div class="categories__extra">Sale -50%</div>
+                    </div>
+                </div>
+                <div class="categories__item bags">
+                    <div class="categories__info">
+                        <h2 class="categories__descr red">Sale</h2>
+                        <div class="categories__extra">-70%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="arrival">
+            <div class="container">
+                <h1 class="arrival__header">
+                    New arrivals
+                </h1>
+                <div class="arrival__wrap">
+                    <div class="arrival__item">
+                        <img src="img/arrivals/arrival1.jpg" class="arrival__img" alt="jeans">
+                        <h3 class="arrival__descr">
+                            Straight Leg Jeans
+                        </h3>
+                        <div class="arrival__price">£55.00</div>
+                    </div>
+                    <div class="arrival__item">
+                        <img src="img/arrivals/arrival2.jpg" class="arrival__img" alt="jeans">
+                        <h3 class="arrival__descr">
+                            Boyfriend T-Shirt with <br> Bohemian Print
+                        </h3>
+                        <div class="arrival__price">£34.25</div>
+                    </div>
+                    <div class="arrival__item">
+                        <img src="img/arrivals/arrival3.jpg" class="arrival__img" alt="jeans">
+                        <h3 class="arrival__descr">
+                            Only Busted Knee Jean
+                        </h3>
+                        <div class="arrival__price">£140.50</div>
+                    </div>
+                    <div class="arrival__item">
+                        <img src="img/arrivals/arrival4.jpg" class="arrival__img" alt="jeans">
+                        <h3 class="arrival__descr">
+                            Only Skinny Jeans
+                        </h3>
+                        <div class="arrival__price">£12.75</div>
+                    </div>
+                </div>
+                <div class="arrival__bottom">
+                    <button class="arrival__button">All arrivals</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container flex">
+            <div class="footer__block flex">
+                <div class="footer__linksBlock">
+                    <h4 class="footer__subheader">Quick Links</h4>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Store locator</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Gift card</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Size guide</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">About us</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Support</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__linksBlock">
+                    <h4 class="footer__subheader">Customer Care</h4>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Customer service</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Track my order</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Return policy</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Shipping & delivery</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Contact us</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Careers</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__block">
+                <div class="footer__socialsBlock flex">
+                    <div class="footer__questions">
+                        <h4 class="footer__socialsSubheader">Questions</h4>
+                        <div class="footer__socialsInfo twitter">
+                            <img src="img/icons/twitter.svg" class="footer__socialsIcon" alt="twitter">
+                            <div>
+                                Tweet us
+                                <a href="https://twitter.com/intent/tweet?screen_name=@template" target="_blank" class="footer__twitterLink">@template</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__orders">
+                        <h4 class="footer__socialsSubheader">Order by phone</h4>
+                        <div class="footer__socialsInfo">
+                                <a href="tel:8-800-409-47-12" class="footer__telLink">8-800-409-47-12</a>
                         </div>
                     </div>
                 </div>
-                <div class="footer__orders">
-                    <h4 class="footer__socialsSubheader">Order by phone</h4>
-                    <div class="footer__socialsInfo">
-                            <a href="tel:8-800-409-47-12" class="footer__telLink">8-800-409-47-12</a>
+                <div class="footer__delivery">
+                    We have our own delivery service which operates in 23 major
+                    European cities. Delivery time - 3-5 days
+                </div>
+                <div class="footer__socials">
+                    <a href="#" target="_blank">
+                        <img src="img/icons/facebook.svg" class="footer__socialIcon" alt="facebook">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="img/icons/twitter-active.svg" class="footer__socialIcon" alt="twitter">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__container">
+                    <div class="footer__copyright">&copy; 2010–2015, The Template Group inc.</div>
+                    <div class="footer__share">
+                        Share
+                        <span class="footer__shareBlock">1 437</span>
+                    </div>
+                    <div class="footer__links">
+                        <a href="#" class="footer__linksItem">Legal notice</a>
+                        <a href="#" class="footer__linksItem">Privacy policy</a>
+                        <a href="#" class="footer__linksItem">Site map</a>
                     </div>
                 </div>
             </div>
-            <div class="footer__delivery">
-                We have our own delivery service which operates in 23 major
-                European cities. Delivery time - 3-5 days
-            </div>
-            <div class="footer__socials">
-                <a href="#" target="_blank">
-                    <img src="img/icons/facebook.svg" class="footer__socialIcon" alt="facebook">
-                </a>
-                <a href="#" target="_blank">
-                    <img src="img/icons/twitter-active.svg" class="footer__socialIcon" alt="twitter">
-                </a>
+        </div>
+    </footer>
+    <footer class="footerMobile">
+        <div class="footerMobile__wrap p-0">
+            <div class="container">
+                <div class="footerMobile__top">
+                    <div class="footerMobile__linksBlock">
+                        <h4 class="footerMobile__subheader">Quick Links</h4>
+                        <ul>
+                            <li class="footerMobile__item">
+                                <a href="#" class="footerMobile__link">Store locator</a>
+                            </li>
+                            <li class="footerMobile__item">
+                                <a href="#" class="footerMobile__link">Gift card</a>
+                            </li>
+                            <li class="footerMobile__item">
+                                <a href="#" class="footerMobile__link">Size guide</a>
+                            </li>
+                            <li class="footerMobile__item">
+                                <a href="#" class="footerMobile__link">About us</a>
+                            </li>
+                            <li class="footerMobile__item">
+                                <a href="#" class="footerMobile__link">Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footerMobile__linksBlock">
+                        <h4 class="footerMobile__subheader">Customer Care</h4>
+                        <ul>
+                            <li class="footerMobile__item">
+                                <a href="#" class="footerMobile__link">Customer service</a>
+                            </li>
+                            <li class="footerMobile__item">
+                                <a href="#" class="footerMobile__link">Track my order</a>
+                            </li>
+                            <li class="footerMobile__item">
+                                <a href="#" class="footerMobile__link">Return policy</a>
+                            </li>
+                            <li class="footerMobile__item">
+                                <a href="#" class="footerMobile__link">Shipping & delivery</a>
+                            </li>
+                            <li class="footerMobile__item">
+                                <a href="#" class="footerMobile__link">Contact us</a>
+                            </li>
+                            <li class="footerMobile__item">
+                                <a href="#" class="footerMobile__link">Careers</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer__bottom">
-        <div class="container">
-            <div class="footer__container">
-                <div class="footer__copyright">&copy; 2010–2015, The Template Group inc.</div>
-                <div class="footer__share">
-                    Share
-                    <span class="footer__shareBlock">1 437</span>
-                </div>
-                <div class="footer__links">
-                    <a href="#" class="footer__linksItem">Legal notice</a>
-                    <a href="#" class="footer__linksItem">Privacy policy</a>
-                    <a href="#" class="footer__linksItem">Site map</a>
+        <div class="footerMobile__wrap">
+            <div class="container p-0">
+                <div class="footerMobile__middle">
+                    <div class="footerMobile__questions">
+                        <h4 class="footerMobile__socialsSubheader">Questions</h4>
+                        <div class="footerMobile__socialsInfo twitter">
+                            <img src="img/icons/twitter.svg" class="footerMobile__socialsIcon" alt="twitter">
+                            <div>
+                                Tweet us
+                                <a href="https://twitter.com/intent/tweet?screen_name=@template" target="_blank" class="footerMobile__twitterLink">@template</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footerMobile__orders">
+                        <h4 class="footerMobile__socialsSubheader">Order by phone</h4>
+                        <div class="footerMobile__socialsInfo">
+                            <a href="tel:8-800-409-47-12" class="footerMobile__telLink">8-800-409-47-12</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+        <div class="footerMobile__wrap">
+            <div class="container p-0">
+                <div class="footerMobile__bottom_first">
+                    <div class="footerMobile__links">
+                        <a href="#" class="footerMobile__linksItem">Legal notice</a>
+                        <a href="#" class="footerMobile__linksItem">Privacy policy</a>
+                        <a href="#" class="footerMobile__linksItem">Site map</a>
+                    </div>
+                    <div class="footerMobile__socials">
+                        <a href="#" target="_blank">
+                            <img src="img/icons/facebook.svg" class="footerMobile__socialIcon" alt="facebook">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="img/icons/twitter-active.svg" class="footerMobile__socialIcon" alt="twitter">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footerMobile__wrap">
+            <div class="container p-0">
+                <div class="footerMobile__bottom_last">
+                    <div class="footerMobile__copyright">&copy; 2010–2015, The Template Group inc.</div>
+                    <div class="footerMobile__share">
+                        Share
+                        <span class="footerMobile__shareBlock">1 437</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -311,7 +311,8 @@
         margin-right: 0;
     }
 
-    .menuMobile__link:hover {
+    .menuMobile__link:hover,
+    .menuMobile__link.is-active {
         color: #f14a58;
     }
 
@@ -345,7 +346,6 @@
     }
 
     /*categories*/
-
     .categories__container {
         flex-direction: column;
     }
@@ -413,6 +413,116 @@
         padding: 20px 60px;
     }
 
+    /*Footer*/
+    .footer {
+        display: none;
+    }
+
+    .footerMobile {
+        display: block;
+        background-color: #fff;
+    }
+
+    .footerMobile__wrap {
+        border-top: 1px solid #e5e5e5;
+    }
+
+    .footerMobile__top {
+        padding: 35px 20px 60px;
+        display: flex;
+    }
+
+    .footerMobile__linksBlock {
+        flex-grow: 1;
+    }
+
+    .footerMobile__linksBlock:last-child {
+        padding-left: 12%;
+    }
+
+    .footerMobile__subheader {
+        font: 700 14px "Open Sans", sans-serif;
+        margin-bottom: 30px;
+    }
+
+    .footerMobile__item {
+        margin-bottom: 20px;
+    }
+
+    .footerMobile__link {
+        font: 400 12px "Roboto", sans-serif;
+        color: #000;
+    }
+
+    .footerMobile__link:hover {
+        text-decoration: underline;
+    }
+
+    .footerMobile__middle {
+        display: flex;
+    }
+
+    .footerMobile__questions {
+        border-right: 1px solid #e5e5e5;
+    }
+
+    .footerMobile__questions,
+    .footerMobile__orders {
+        flex-grow: 1;
+        padding: 25px 20px 40px;
+    }
+
+    .footerMobile__socialsSubheader {
+        font: 700 14px "Open Sans", sans-serif;
+        margin-bottom: 15px;
+    }
+
+    .footerMobile__socialsInfo {
+        display: flex;
+        align-items: center;
+        font: 400 12px "Roboto", sans-serif;
+    }
+
+    .footerMobile__socialsIcon {
+        width: 16px;
+        height: auto;
+        margin-right: 13px;
+    }
+
+    .footerMobile__twitterLink {
+        font-weight: 700;
+        color: #000;
+    }
+
+    .footerMobile__bottom_first,
+    .footerMobile__bottom_last {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 20px;
+    }
+
+    .footerMobile__linksItem {
+        font: 700 10px "Roboto", sans-serif;
+        margin-right: 12px;
+    }
+
+    .footerMobile__socialIcon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .footerMobile__socialIcon:first-child {
+        margin-right: 25px;
+    }
+
+    .footerMobile__share {
+        font: 700 14px "Open Sans", sans-serif;
+    }
+
+    .footerMobile__copyright {
+        font: 700 10px "Roboto", sans-serif;
+    }
 }
 
 @media screen and (max-width: 374px) {

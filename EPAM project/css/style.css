@@ -103,7 +103,8 @@ ul {
     margin-right: 0;
 }
 
-.menu__link:hover {
+.menu__link:hover,
+.menu__link.is-active {
     color: #f14a58;
 }
 
@@ -252,6 +253,10 @@ ul {
     background-color: #fff;
 }
 /*footer*/
+.footerMobile {
+    display: none;
+}
+
 .footer {
     width: 100%;
     border-top: 1px solid #e5e5e5;
@@ -285,6 +290,10 @@ ul {
 .footer__link {
     font: 400 14px "Roboto", sans-serif;
     color: #000;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
 }
 
 .footer__socialsBlock {
@@ -364,7 +373,8 @@ ul {
     margin-right: -85px;
 }
 
-.footer__shareBlock {
+.footer__shareBlock,
+.footerMobile__shareBlock {
     padding: 5px;
     background-color: #f4f4f4;
     font: 400 12px "Roboto", sans-serif;
@@ -373,7 +383,8 @@ ul {
     position: relative;
 }
 
-.footer__shareBlock::before {
+.footer__shareBlock::before,
+.footerMobile__shareBlock::before {
     content: "";
     position: absolute;
     top: 50%;
