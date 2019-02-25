@@ -22,9 +22,10 @@ ul {
 }
 
 .container {
-    width: 1180px;
-    max-width: 100%;
+    max-width: 1180px;
+    width: 100%;
     padding: 0 15px;
+    margin: 0 auto;
 }
 
 .p-0 {
@@ -111,6 +112,7 @@ ul {
     width: 115px;
     font: 700 12px "Open Sans", sans-serif;
     padding-bottom: 8px;
+    padding-left: 5px;
 }
 
 .search__field,
@@ -146,11 +148,15 @@ ul {
 .slider__img {
     width: 100%;
     height: auto;
+    display: inherit;
 }
 
 .categories {
-    background-image: linear-gradient(to right, #fff, #f7f7f7);
     border-bottom: 1px solid #e5e5e5;
+}
+
+.categories__container {
+    flex-direction: row;
 }
 
 .shoes, .caps {
