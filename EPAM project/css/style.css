@@ -246,11 +246,17 @@ ul {
     padding: 100px 0 80px;
 }
 
-.arrival__button {
+.button {
     border: 1px solid #e5e5e5;
     font: 700 24px "Open Sans", sans-serif;
     padding: 30px 100px;
     background-color: #fff;
+    transition: all .3s ease-out;
+}
+
+.button:hover {
+    border-color: #f14a58;
+    color: #f14a58;
 }
 /*footer*/
 .footerMobile {
@@ -496,5 +502,183 @@ ul {
 .filter__item.is-show .filter__dropdown {
     display: block;
 }
+
+.container__catalogRow {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+.catalog__rowItem {
+    padding: 0 15px;
+    text-align: center;
+}
+
+.catalog__rowItem:first-child {
+    padding-left: 0;
+}
+
+.catalog__rowItem:last-child {
+    padding-right: 0;
+}
+
+.catalog__rowImg {
+    width: 100%;
+    height: auto;
+}
+
+.catalog__imgWrap {
+    position: relative;
+}
+
+.catalog__imgOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .3);
+    transition: all .3s ease-out;
+}
+
+.catalog__rowItem:hover .catalog__imgOverlay{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.catalog__rowItem:hover .catalog__descrName{
+    color: #f14a58;
+}
+
+.catalog__imgText {
+    color: #f14a58;
+    font: 700 22px "Open Sans", sans-serif;
+}
+
+.catalog__descr {
+    padding-top: 50px;
+}
+
+.catalog__descrName {
+    font: 700 14px "Roboto", sans-serif;
+    margin-bottom: 20px;
+    line-height: 28px;
+}
+
+.catalog__descrPrice {
+    font: 400 14px "Roboto", sans-serif;
+}
+
+.catalog__descrDetail {
+    font: 400 16px "Crimson", cursive;
+    color: #757575;
+}
+
+.catalog__infoBlock {
+    text-align: center;
+    padding: 85px 0 40px;
+}
+
+.catalog__infoMain {
+    font: 700 24px "Open Sans", sans-serif;
+    margin-bottom: 20px;
+}
+
+.catalog__infoExtra {
+    font: 400 16px "Crimson", cursive;
+    color: #757575;
+}
+
+.catalog__imgDescr {
+    position: absolute;
+    bottom: 15%;
+    width: 100%;
+    text-align: center;
+}
+
+.catalog__imgDescrName {
+    font: 700 30px "Open Sans", sans-serif;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.catalog__imgDescrSub {
+    font: 400 16px "Crimson", cursive;
+    color: #fff;
+}
+
+.catalog__buttonWrap {
+    text-align: center;
+    padding: 95px 0 155px;
+}
+
+.catalog__bottom {
+    display: flex;
+    height: 385px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.catalog__bottomItem,
+.catalog__bottomInnerBlock {
+    width: 50%;
+    position: relative;
+}
+
+.catalog__bottomItem_blue {
+    background: url("../img/catalog/adidas.png") no-repeat center center #324063;
+    background-size: cover;
+}
+
+.catalog__bottomInnerBlock_grey {
+    background: url("../img/catalog/jeans.png") no-repeat center center #c9cbcd;
+    background-size: cover;
+}
+
+.catalog__bottomInnerBlock_white {
+    background: url("../img/catalog/bag.png") no-repeat center center #fff;
+    background-size: cover;
+}
+
+.catalog__bottomItemDescr {
+    position: absolute;
+    text-align: center;
+}
+
+.catalog__bottomItemDescr_adidas {
+    top: 65px;
+    right: 77px;
+}
+
+.catalog__bottomItemDescrHeader {
+    font: 700 28px "Open Sans", sans-serif;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.catalog__bottomItemDescrInfo {
+    font: 400 16px "Crimson", cursive;
+    color: #fff;
+}
+
+.catalog__bottomItemDescr_center {
+    width: 100%;
+    bottom: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.catalog__bottomItemDescrHeader_red {
+    color: #f14a58;
+}
+
+.catalog__bottomItemDescrInfo_grey {
+    color: #757575;
+}
+
+
 
 
