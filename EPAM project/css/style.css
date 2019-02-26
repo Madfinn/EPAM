@@ -130,7 +130,7 @@ ul {
     right: 5px;
     bottom: 50%;
 }
-/*Start*/
+/*********************************Start******************************/
 .sliderTablet {
     display: none;
 }
@@ -399,5 +399,102 @@ ul {
     margin-left: 35px;
 }
 
+/*********************************Catalog******************************/
+.filters {
+    background-image: linear-gradient(to right, #f7f7f7 ,#fff);
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.filters__container {
+    display: flex;
+}
+
+.filter__item {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 20px;
+    transition: all .4s ease-in-out;
+    position: relative;
+}
+
+.filter__item:first-child {
+    padding-left: 0;
+}
+
+.filter__item:last-child {
+    padding-right: 0;
+}
+
+.filter__item:hover {
+    cursor: pointer;
+}
+
+.fashion,
+.brand,
+.size {
+    background-color: #f7f7f7;
+}
+
+.type,
+.color,
+.price {
+    background-color: #fff;
+}
+
+.filter__label{
+    font: 700 12px "Roboto", sans-serif;
+}
+
+.filter__header,
+.filter__header_red {
+    font: 700 16px "Open Sans", sans-serif;
+    line-height: 28px;
+}
+
+.filter__header_red {
+   color: #f14a58;
+}
+
+.filter__icon {
+    width: 8px;
+    height: auto;
+}
+
+.filter__dropdown {
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 77px;
+    display: none;
+}
+
+.filter__dropdownItem {
+    font: 700 16px "Open Sans", sans-serif;
+    line-height: 40px;
+    color: #000;
+    padding: 25px 20px;
+    transition: all .2s ease-in-out;
+}
+
+.filter__dropdownItem:hover {
+    background-color: #f7f7f7;
+    color: #f14a58;
+}
+
+.filter__item.is-show {
+    border-right: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.filter__item.is-show .filter__dropdown {
+    display: block;
+}
 
 
