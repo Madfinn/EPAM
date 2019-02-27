@@ -86,7 +86,7 @@
     </div>
 </header>
 <main class="main">
-    <aside class="filters">
+    <aside class="filters filters__laptop">
         <div class="container filters__container">
             <div class="filter__item  fashion">
                 <div class="filter__block">
@@ -119,7 +119,6 @@
                     <li class="filter__dropdownItem">Red</li>
                     <li class="filter__dropdownItem">Green</li>
                     <li class="filter__dropdownItem">Golden</li>
-
                 </ul>
             </div>
             <div class="filter__item  brand">
@@ -147,6 +146,21 @@
                 <div class="filter__block">
                     <img src="img/icons/caret-down.svg" class="filter__icon" alt="caret down">
                 </div>
+            </div>
+        </div>
+    </aside>
+    <aside class="filters filters__mobile">
+        <div class="container filters__container">
+            <div class="filter__items">
+                <span class="red">Casual style</span>,
+                <span>Product type</span>,
+                <span>Color</span>,
+                <span class="red">Antipodium</span>,
+                <span class="red">Uk 18</span>,
+                <span>Price range</span>
+                <span class="filterMobile__iconWrap">
+                    <img src="img/icons/caret-down.svg" class="filterMobile__icon" alt="caret down">
+                </span>
             </div>
         </div>
     </aside>
@@ -180,7 +194,7 @@
                     <div class="catalog__descrPrice">£76.25</div>
                 </div>
             </div>
-            <div class="catalog__rowItem">
+            <div class="catalog__rowItem d-mobile-none">
                 <div class="catalog__imgWrap">
                     <a href="#">
                         <img src="img/arrivals/arrival1.jpg" alt="cloth" class="catalog__rowImg">
@@ -194,7 +208,7 @@
                     <div class="catalog__descrPrice">£130.25 <span class="catalog__descrDetail">New</span></div>
                 </div>
             </div>
-            <div class="catalog__rowItem">
+            <div class="catalog__rowItem d-tablet-none d-mobile-none">
                 <div class="catalog__imgWrap">
                     <a href="#">
                         <img src="img/arrivals/photo4.jpg" alt="cloth" class="catalog__rowImg">
@@ -221,6 +235,20 @@
             </div>
         </div>
         <div class="container container__catalogRow">
+            <div class="catalog__rowItem d-laptop-none">
+                <div class="catalog__imgWrap">
+                    <a href="#">
+                        <img src="img/arrivals/photo4.jpg" alt="cloth" class="catalog__rowImg">
+                    </a>
+                    <div class="catalog__imgOverlay">
+                        <div class="catalog__imgText">View Item</div>
+                    </div>
+                </div>
+                <div class="catalog__descr">
+                    <h3 class="catalog__descrName">With Patchwork Crochet</h3>
+                    <div class="catalog__descrPrice">£80.60</div>
+                </div>
+            </div>
             <div class="catalog__rowItem">
                 <div class="catalog__imgWrap">
                     <a href="#">
@@ -258,7 +286,7 @@
                     </div>
                 </div>
             </div>
-            <div class="catalog__rowItem">
+            <div class="catalog__rowItem d-tablet-none">
                 <div class="catalog__imgWrap">
                     <a href="#">
                         <img src="img/arrivals/photo7.jpg" alt="cloth" class="catalog__rowImg">
@@ -274,7 +302,7 @@
                     </div>
                 </div>
             </div>
-            <div class="catalog__rowItem">
+            <div class="catalog__rowItem d-tablet-none">
                 <div class="catalog__imgWrap">
                     <a href="#">
                         <img src="img/arrivals/photo8.jpg" alt="cloth" class="catalog__rowImg">
@@ -292,6 +320,38 @@
             </div>
         </div>
         <div class="container container__catalogRow">
+            <div class="catalog__rowItem d-laptop-none">
+                <div class="catalog__imgWrap">
+                    <a href="#">
+                        <img src="img/arrivals/photo7.jpg" alt="cloth" class="catalog__rowImg">
+                    </a>
+                    <div class="catalog__imgOverlay">
+                        <div class="catalog__imgText">View Item</div>
+                    </div>
+                </div>
+                <div class="catalog__descr">
+                    <h3 class="catalog__descrName">Colour Block</h3>
+                    <div class="catalog__descrPrice">
+                        £550.50
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__rowItem d-laptop-none">
+                <div class="catalog__imgWrap">
+                    <a href="#">
+                        <img src="img/arrivals/photo8.jpg" alt="cloth" class="catalog__rowImg">
+                    </a>
+                    <div class="catalog__imgOverlay">
+                        <div class="catalog__imgText">View Item</div>
+                    </div>
+                </div>
+                <div class="catalog__descr">
+                    <h3 class="catalog__descrName">Monki Festval Knitted</h3>
+                    <div class="catalog__descrPrice">
+                        £24.75
+                    </div>
+                </div>
+            </div>
             <div class="catalog__rowItem">
                 <div class="catalog__imgWrap">
                     <a href="#">
@@ -308,6 +368,59 @@
                     </div>
                 </div>
             </div>
+            <div class="catalog__rowItem d-tablet-none">
+                <div class="catalog__imgWrap">
+                    <a href="#">
+                        <img src="img/arrivals/photo10.jpg" alt="cloth" class="catalog__rowImg">
+                    </a>
+                    <div class="catalog__imgOverlay">
+                        <div class="catalog__imgText">View Item</div>
+                    </div>
+                </div>
+                <div class="catalog__descr">
+                    <h3 class="catalog__descrName">Paul & Joe Sister Jumper <br>
+                        with Neon Trims</h3>
+                    <div class="catalog__descrPrice">
+                        £19.75
+                        <span class="catalog__descrDetail">New</span>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__rowItem d-tablet-none">
+                <div class="catalog__imgWrap">
+                    <a href="#">
+                        <img src="img/arrivals/photo11.jpg" alt="cloth" class="catalog__rowImg">
+                    </a>
+                    <div class="catalog__imgOverlay">
+                        <div class="catalog__imgText">View Item</div>
+                    </div>
+                </div>
+                <div class="catalog__descr">
+                    <h3 class="catalog__descrName">Only Busted Knee Jean</h3>
+                    <div class="catalog__descrPrice">
+                        £140.50
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__rowItem d-tablet-none">
+                <div class="catalog__imgWrap">
+                    <a href="#">
+                        <img src="img/arrivals/photo12.jpg" alt="cloth" class="catalog__rowImg">
+                    </a>
+                    <div class="catalog__imgOverlay">
+                        <div class="catalog__imgText">View Item</div>
+                    </div>
+                </div>
+                <div class="catalog__descr">
+                    <h3 class="catalog__descrName">Boyfriend T-Shirt with <br>
+                        Bohemian Print</h3>
+                    <div class="catalog__descrPrice">
+                        £85.75
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container container__catalogRow d-laptop-none">
             <div class="catalog__rowItem">
                 <div class="catalog__imgWrap">
                     <a href="#">
@@ -326,7 +439,7 @@
                     </div>
                 </div>
             </div>
-            <div class="catalog__rowItem">
+            <div class="catalog__rowItem ">
                 <div class="catalog__imgWrap">
                     <a href="#">
                         <img src="img/arrivals/photo11.jpg" alt="cloth" class="catalog__rowImg">
@@ -380,7 +493,7 @@
                     <div class="catalog__bottomItemDescrInfo">£ 150.50</div>
                 </div>
             </div>
-            <div class="catalog__bottomInnerBlock catalog__bottomInnerBlock_white">
+            <div class="catalog__bottomInnerBlock catalog__bottomInnerBlock_white d-tablet-none">
                 <div class="catalog__bottomItemDescr catalog__bottomItemDescr_center">
                     <div class="catalog__bottomItemDescrHeader catalog__bottomItemDescrHeader_red">Sale</div>
                     <div class="catalog__bottomItemDescrInfo catalog__bottomItemDescrInfo_grey">-70%</div>

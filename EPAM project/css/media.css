@@ -1,5 +1,10 @@
-@media (min-width: 1025px) {
-    .bags {
+@media (min-width: 1024px) {
+    .d-laptop-none {
+        display: none;
+    }
+
+    .bags,
+    .filters__mobile {
         display: none;
     }
 
@@ -12,13 +17,21 @@
     }
 }
 /*tablet*/
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
     body {
         overflow-x: hidden;
     }
 
     .container {
         max-width: 720px;
+    }
+
+    .d-tablet-none {
+        display: none;
+    }
+
+    .filters__laptop {
+        display: none;
     }
 
     /*Header*/
@@ -214,16 +227,122 @@
     .footer__linksItem {
         margin-left: 16px;
     }
+
+    /*catalog filters*/
+    .filters__laptop {
+        display: none;
+    }
+
+    .filters {
+        background-image: none;
+        background-color: #fff;
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 25px 0;
+    }
+
+    .filter__items {
+        font: 700 14px "Open Sans", sans-serif;
+        display: flex;
+        align-items: center;
+    }
+
+    .filter__items:hover {
+        cursor: pointer;
+    }
+
+    .filter__items span{
+        margin-left: 5px;
+    }
+
+    .filter__items span:first-child {
+        margin-left: 0;
+    }
+
+    .filterMobile__icon {
+        width: 8px;
+        height: auto;
+        margin-left: 20px;
+    }
+
+    .container__catalogRow {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 40px;
+    }
+
+    .catalog__descr {
+        padding-top: 45px;
+        padding-bottom: 35px;
+    }
+
+    .catalog__infoBlock {
+        text-align: center;
+        padding: 40px 60px 40px;
+    }
+
+    .catalog__infoMain {
+        font: 700 20px "Open Sans", sans-serif;
+        margin-bottom: 20px;
+        line-height: 34px;
+    }
+
+    .catalog__infoExtra {
+        line-height: 30px;
+    }
+
+    .catalog__imgDescrName {
+        font: 700 24px "Open Sans", sans-serif;
+    }
+
+    .catalog__buttonWrap {
+        padding: 70px 0 135px;
+    }
+
+    .catalog__bottomItem:first-child {
+        width: 75%;
+    }
+
+    .catalog__bottomItem:last-child {
+        width: 25%;
+    }
+
+    .catalog__bottomInnerBlock {
+        width: 100%;
+    }
+
+    .catalog__bottomItemDescr_adidas {
+        top: 65px;
+        right: 77px;
+    }
+
+    .catalog__bottomItemDescrHeader {
+        font: 700 22px "Open Sans", sans-serif;
+    }
+
+    .catalog__bottomItemDescrInfo {
+        font: 400 16px "Crimson", cursive;
+    }
+
 }
 
 /*mobile*/
 @media screen and (max-width: 767px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .d-mobile-none {
+        display: none;
+    }
+
     .container {
         max-width: 540px;
         width: 100%;
     }
 
-    .header {
+    .header,
+    .filters__laptop {
         display: none;
     }
 
@@ -523,11 +642,56 @@
     .footerMobile__copyright {
         font: 700 10px "Roboto", sans-serif;
     }
+
+    /*Filters*/
+    .filters__mobile {
+        max-width: 100%;
+        background-image: none;
+        background-color: #fff;
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 25px 0;
+    }
+
+    .filter__items {
+        position: relative;
+        white-space: nowrap;
+        font: 700 13px "Open Sans", sans-serif;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .filter__items:hover {
+        cursor: pointer;
+    }
+
+    .filter__items span{
+        margin-left: 5px;
+    }
+
+    .filter__items span:first-child {
+        margin-left: 0;
+    }
+
+    .filterMobile__iconWrap {
+        position: absolute;
+        background-color: #fff;
+        right: 0;
+        padding: 10px 20px;
+     }
+
+    .filterMobile__icon {
+        width: 8px;
+        height: auto;
+    }
+
 }
 
 @media screen and (max-width: 374px) {
     body {
         overflow-x: auto;
     }
+
 }
 
