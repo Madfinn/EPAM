@@ -686,6 +686,66 @@
         height: auto;
     }
 
+    .container__catalogRow.hidden {
+        display: none;
+    }
+
+    .container__catalogRow {
+        padding-top: 20px;
+    }
+
+    .catalog__descr {
+        padding: 30px 0;
+    }
+
+    .catalog__infoBlock {
+        text-align: center;
+        padding: 35px 40px 50px;
+    }
+
+    .catalog__infoMain {
+        font-size: 18px;
+        margin-bottom: 25px;
+        line-height: 30px;
+    }
+
+    .catalog__infoExtra {
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    .catalog__imgDescrName,
+    .catalog__descrPrice,
+    .catalog__descrDetail {
+       font-size: 12px;
+    }
+
+    .catalog__imgText {
+        font-size: 16px;
+    }
+
+    .catalog__buttonWrap {
+        padding: 50px 0 100px;
+    }
+
+    .catalog__bottomItem:first-child {
+        height: 235px;
+        width: 100%;
+    }
+
+    .catalog__bottomItemDescr_adidas {
+        top: 65px;
+        right: 77px;
+    }
+
+    .catalog__bottomItemDescrHeader {
+        font: 700 22px "Open Sans", sans-serif;
+    }
+
+    .catalog__bottomItemDescrInfo {
+        font: 400 16px "Crimson", cursive;
+    }
+
 }
 
 @media screen and (max-width: 374px) {
