@@ -94,7 +94,7 @@
         display: block;
         font: 700 24px "Open Sans", sans-serif;
         color: #000;
-        line-height: 60px;
+        line-height: 50px;
         margin-right: 0;
     }
 
@@ -353,10 +353,88 @@
         padding: 10px 20px;
     }
 
+    .filter__open {
+        display: none;
+        position: absolute;
+        top: 154px;
+        z-index: 1;
+        width: 100%;
+        background-color: #fff;
+        padding: 40px 20px;
+    }
+
+    .filters__mobile {
+        background-color: #fff;
+    }
+
+    .filters__mobile.is-show .filter__open {
+        display: block;
+    }
+
+    .filter__open_top,
+    .filter__open_bottom,
+    .filter__open_last{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .filter__open_top,
+    .filter__open_bottom {
+        margin-bottom: 40px;
+    }
+
+    .filter__dropdownMobile {
+        list-style-type: disc;
+        padding-left: 15px;
+    }
+
+    .filter__itemTitle {
+        font: 700 16px "Roboto", sans-serif;
+        margin-bottom: 20px;
+    }
+
+    .filter__dropdownItemMobile {
+        font: 700 14px "Open Sans", sans-serif;
+        color: #a8a8a8;
+        margin-bottom: 15px;
+    }
+
+    .filter__dropdownItemMobile:last-child {
+        margin-bottom: 0;
+    }
+
     .filterMobile__icon {
+        position: absolute;
         width: 8px;
         height: auto;
+        right: 0;
+        top: 40%;
+        transform: translateY(-50%);
+        z-index: 1;
     }
+
+    .filters__closeIcon {
+        position: absolute;
+        width: 16px;
+        height: auto;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: none;
+    }
+
+    .filters__mobile.is-show .filterMobile__icon {
+        display: none;
+    }
+
+    .filters__mobile.is-show .filters__closeIcon {
+        display: block;
+    }
+
+    .filters__closeIcon:hover {
+        cursor: pointer;
+    }
+
 
     .container__catalogRow.hidden {
         display: none;
@@ -504,6 +582,70 @@
     .item__addBtn {
         padding: 20px 60px;
         font-size: 18px;
+    }
+
+    /*Shopping bag*/
+    .bag__title {
+        font-size: 18px;
+    }
+
+    .bag__deliveryInfo {
+        font-size: 10px;
+    }
+
+    .bag__bottomBlock {
+        padding-top: 20px;
+        padding-bottom: 35px;
+    }
+
+    .bag__emptyLink {
+        font-size: 10px;
+    }
+
+    .bag__button {
+        padding: 20px 30px;
+    }
+
+    .bag__costLabel {
+       font-size: 10px;
+    }
+
+    .bag__costPrice {
+        font-size: 14px;
+    }
+
+    .bag__topContainer {
+        flex-direction: column;
+    }
+
+    .bag__item {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .bag__itemDescr {
+        padding: 15px 20px;
+    }
+
+    .bag__descrName {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    .bag__itemPrice {
+       font-size: 14px;
+        margin-bottom: 30px;
+    }
+    .bag__itemDetails {
+        font-size: 10px;
+    }
+
+    .bag__itemDetails.last {
+        margin-bottom: 30px;
+    }
+
+    .bag__item .bag__itemRemove {
+        font-size: 11px;
     }
 
 }

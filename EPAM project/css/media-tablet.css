@@ -229,6 +229,10 @@
         display: none;
     }
 
+    .filters__container {
+        position: relative;
+    }
+
     .filters {
         background-image: none;
         background-color: #fff;
@@ -259,6 +263,76 @@
         width: 8px;
         height: auto;
         margin-left: 20px;
+    }
+
+    .filter__open {
+        display: none;
+        position: absolute;
+        top: 45px;
+        z-index: 1;
+        width: 100%;
+        background-color: #fff;
+        padding: 50px 0;
+    }
+
+    .filters__mobile {
+        background-color: #fff;
+    }
+
+    .filters__mobile.is-show .filter__open {
+        display: block;
+    }
+
+    .filter__open_top,
+    .filter__open_bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .filter__open_top {
+        margin-bottom: 50px;
+    }
+
+    .filter__dropdownMobile {
+        list-style-type: disc;
+        padding-left: 15px;
+    }
+
+    .filter__itemTitle {
+        font: 700 16px "Roboto", sans-serif;
+        margin-bottom: 20px;
+    }
+
+    .filter__dropdownItemMobile {
+        font: 700 14px "Open Sans", sans-serif;
+        color: #a8a8a8;
+        margin-bottom: 15px;
+    }
+
+    .filter__dropdownItemMobile:last-child {
+        margin-bottom: 0;
+    }
+
+    .filters__closeIcon {
+        position: absolute;
+        width: 16px;
+        height: auto;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: none;
+    }
+
+    .filters__mobile.is-show .filterMobile__icon {
+        display: none;
+    }
+
+    .filters__mobile.is-show .filters__closeIcon {
+        display: block;
+    }
+
+    .filters__closeIcon:hover {
+        cursor: pointer;
     }
 
     .container__catalogRow {
@@ -389,5 +463,45 @@
         font-size: 20px;
     }
 
+    /*Shopping bag*/
+    .bag__title {
+        font-size: 20px;
+    }
+
+    .bag__deliveryInfo {
+        font-size: 11px;
+    }
+
+    .bag__button {
+        padding: 25px 85px;
+    }
+
+    .bag__costPrice {
+        font-size: 16px;
+    }
+
+    .bag__item {
+        margin-bottom: 95px;
+    }
+
+    .bag__itemDescr {
+        padding: 15px 25px;
+    }
+
+    .bag__descrName {
+        margin-bottom: 10px;
+    }
+
+    .bag__itemPrice {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    .bag__itemDetails {
+        margin-bottom: 10px;
+    }
+
+    .bag__itemDetails.last {
+        margin-bottom: 15px;
+    }
 }
 

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/media-tablet.css">
     <link rel="stylesheet" href="css/media-mobile.css">
     <script defer src="js/script.js"></script>
+    <script defer src="js/catalog.js"></script>
 </head>
 <body>
 <header class="header">
@@ -25,7 +26,7 @@
                     </a>
                 </div>
                 <div class="header__wrapBag">
-                    <a href="#" class="header__link">
+                    <a href="shopping-bag.html" class="header__link">
                         <img src="img/icons/shoppingBag.svg" class="header__bagIcon" alt="shopping bag">
                         Bag (<span class="header__bagItems">0</span>)
                     </a>
@@ -86,16 +87,25 @@
         </div>
     </div>
 </header>
-<aside class="filters filters__laptop">
+<aside class="filters filters__laptop is-show">
     <div class="container filters__container">
         <div class="filter__item  fashion">
             <div class="filter__block">
                 <div class="filter__label">Fashion</div>
-                <div class="filter__header_red">Casual Style</div>
+                <div class="filter__header selected">Casual Style</div>
             </div>
             <div class="filter__block">
                 <img src="img/icons/caret-down.svg" class="filter__icon" alt="caret down">
             </div>
+            <ul class="filter__dropdown">
+                <li class="filter__dropdownItem">Not selected</li>
+                <li class="filter__dropdownItem">Nail the 90s</li>
+                <li class="filter__dropdownItem">Casual style</li>
+                <li class="filter__dropdownItem">New Look</li>
+                <li class="filter__dropdownItem">Sport</li>
+                <li class="filter__dropdownItem">Vintage</li>
+                <li class="filter__dropdownItem">Сlassical style</li>
+            </ul>
         </div>
         <div class="filter__item  type">
             <div class="filter__block">
@@ -104,6 +114,12 @@
             <div class="filter__block">
                 <img src="img/icons/caret-down.svg" class="filter__icon" alt="caret down">
             </div>
+            <ul class="filter__dropdown">
+                <li class="filter__dropdownItem">Not selected</li>
+                <li class="filter__dropdownItem">Coats & Jackets</li>
+                <li class="filter__dropdownItem">Dresses</li>
+                <li class="filter__dropdownItem">Jersey Tops</li>
+            </ul>
         </div>
         <div class="filter__item  color">
             <div class="filter__block">
@@ -124,20 +140,39 @@
         <div class="filter__item  brand">
             <div class="filter__block">
                 <div class="filter__label">Brand</div>
-                <div class="filter__header_red">Antipodium</div>
+                <div class="filter__header selected">Antipodium</div>
             </div>
             <div class="filter__block">
                 <img src="img/icons/caret-down.svg" class="filter__icon" alt="caret down">
             </div>
+            <ul class="filter__dropdown">
+                <li class="filter__dropdownItem">Not selected</li>
+                <li class="filter__dropdownItem">Chi Chi London</li>
+                <li class="filter__dropdownItem">Antipodium</li>
+                <li class="filter__dropdownItem">Adidas</li>
+                <li class="filter__dropdownItem">New Balance</li>
+                <li class="filter__dropdownItem">River Island</li>
+            </ul>
         </div>
         <div class="filter__item  size">
             <div class="filter__block">
                 <div class="filter__label">Size</div>
-                <div class="filter__header_red">Uk 18</div>
+                <div class="filter__header selected">Uk 18</div>
             </div>
             <div class="filter__block">
                 <img src="img/icons/caret-down.svg" class="filter__icon" alt="caret down">
             </div>
+            <ul class="filter__dropdown">
+                <li class="filter__dropdownItem">Not selected</li>
+                <li class="filter__dropdownItem">UK 2</li>
+                <li class="filter__dropdownItem">UK 18</li>
+                <li class="filter__dropdownItem">UK 18L</li>
+                <li class="filter__dropdownItem">UK 20</li>
+                <li class="filter__dropdownItem">UK 20L</li>
+                <li class="filter__dropdownItem">UK 20S</li>
+                <li class="filter__dropdownItem">UK 22S</li>
+                <li class="filter__dropdownItem">UK 22</li>
+            </ul>
         </div>
         <div class="filter__item  price">
             <div class="filter__block">
@@ -146,21 +181,142 @@
             <div class="filter__block">
                 <img src="img/icons/caret-down.svg" class="filter__icon" alt="caret down">
             </div>
+            <ul class="filter__dropdown">
+                <li class="filter__dropdownItem">Not selected</li>
+                <li class="filter__dropdownItem">To £99</li>
+                <li class="filter__dropdownItem">£100 - £299</li>
+                <li class="filter__dropdownItem">From £300</li>
+            </ul>
         </div>
     </div>
 </aside>
-<aside class="filters filters__mobile">
-    <div class="container filters__container">
-        <div class="filter__items">
-            <span class="red">Casual style</span>,
-            <span>Product type</span>,
-            <span>Color</span>,
-            <span class="red">Antipodium</span>,
-            <span class="red">Uk 18</span>,
-            <span>Price range</span>
-            <span class="filterMobile__iconWrap">
+<aside class="filters filters__mobile is-show">
+    <div class="filters__container">
+        <div class="container">
+            <div class="filter__items">
+                <span class="selected">Casual style</span>,
+                <span>Product type</span>,
+                <span>Color</span>,
+                <span class="selected">Antipodium</span>,
+                <span class="selected">Uk 18</span>,
+                <span>Price range</span>
+                <span class="filterMobile__iconWrap">
                     <img src="img/icons/caret-down.svg" class="filterMobile__icon" alt="caret down">
                 </span>
+                <span class="filterMobile__iconWrap">
+                    <img src="img/icons/close.svg" alt="close" class="filters__closeIcon">
+                </span>
+            </div>
+        </div>
+        <div class="filter__open">
+            <div class="container">
+                <div class="filter__open_top">
+                    <div class="filter__openItem">
+                        <h4 class="filter__itemTitle">Fashion</h4>
+                        <ul class="filter__dropdownMobile">
+                            <li class="filter__dropdownItemMobile">Not selected</li>
+                            <li class="filter__dropdownItemMobile">Nail the 90s</li>
+                            <li class="filter__dropdownItemMobile">Casual style</li>
+                            <li class="filter__dropdownItemMobile">New Look</li>
+                            <li class="filter__dropdownItemMobile">Sport</li>
+                            <li class="filter__dropdownItemMobile">Vintage</li>
+                            <li class="filter__dropdownItemMobile">Сlassical style</li>
+                        </ul>
+                    </div>
+                    <div class="filter__openItem">
+                        <h4 class="filter__itemTitle">Product type</h4>
+                        <ul class="filter__dropdownMobile">
+                            <li class="filter__dropdownItemMobile">Not selected</li>
+                            <li class="filter__dropdownItemMobile">Coats & Jackets</li>
+                            <li class="filter__dropdownItemMobile">Dresses</li>
+                            <li class="filter__dropdownItemMobile">Jersey Tops</li>
+                        </ul>
+                    </div>
+                    <div class="filter__openItem d-mobile-none">
+                        <h4 class="filter__itemTitle">Color</h4>
+                        <ul class="filter__dropdownMobile">
+                            <li class="filter__dropdownItemMobile">Not selected</li>
+                            <li class="filter__dropdownItemMobile">Black</li>
+                            <li class="filter__dropdownItemMobile">Blue</li>
+                            <li class="filter__dropdownItemMobile">Red</li>
+                            <li class="filter__dropdownItemMobile">Green</li>
+                            <li class="filter__dropdownItemMobile">Golden</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter__open_bottom">
+                    <div class="filter__openItem d-tablet-none">
+                        <h4 class="filter__itemTitle">Color</h4>
+                        <ul class="filter__dropdownMobile">
+                            <li class="filter__dropdownItemMobile">Not selected</li>
+                            <li class="filter__dropdownItemMobile">Black</li>
+                            <li class="filter__dropdownItemMobile">Blue</li>
+                            <li class="filter__dropdownItemMobile">Red</li>
+                            <li class="filter__dropdownItemMobile">Green</li>
+                            <li class="filter__dropdownItemMobile">Golden</li>
+                        </ul>
+                    </div>
+                    <div class="filter__openItem">
+                        <h4 class="filter__itemTitle">Brand</h4>
+                        <ul class="filter__dropdownMobile">
+                            <li class="filter__dropdownItemMobile">Not selected</li>
+                            <li class="filter__dropdownItemMobile">Chi Chi London</li>
+                            <li class="filter__dropdownItemMobile">Antipodium</li>
+                            <li class="filter__dropdownItemMobile">Adidas</li>
+                            <li class="filter__dropdownItemMobile">New Balance</li>
+                            <li class="filter__dropdownItemMobile">River Island</li>
+                        </ul>
+                    </div>
+                    <div class="filter__openItem d-mobile-none">
+                        <h4 class="filter__itemTitle">Size</h4>
+                        <ul class="filter__dropdownMobile">
+                            <li class="filter__dropdownItemMobile">Not selected</li>
+                            <li class="filter__dropdownItemMobile">UK 2</li>
+                            <li class="filter__dropdownItemMobile">UK 18</li>
+                            <li class="filter__dropdownItemMobile">UK 18L</li>
+                            <li class="filter__dropdownItemMobile">UK 20</li>
+                            <li class="filter__dropdownItemMobile">UK 20L</li>
+                            <li class="filter__dropdownItemMobile">UK 20S</li>
+                            <li class="filter__dropdownItemMobile">UK 22S</li>
+                            <li class="filter__dropdownItemMobile">UK 22</li>
+                        </ul>
+                    </div>
+                    <div class="filter__openItem d-mobile-none">
+                        <h4 class="filter__itemTitle">Price range</h4>
+                        <ul class="filter__dropdownMobile">
+                            <li class="filter__dropdownItemMobile">Not selected</li>
+                            <li class="filter__dropdownItemMobile">To £99</li>
+                            <li class="filter__dropdownItemMobile">£100 - £299</li>
+                            <li class="filter__dropdownItemMobile">From £300</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter__open_last d-tablet-none">
+                    <div class="filter__openItem">
+                        <h4 class="filter__itemTitle">Size</h4>
+                        <ul class="filter__dropdownMobile">
+                            <li class="filter__dropdownItemMobile">Not selected</li>
+                            <li class="filter__dropdownItemMobile">UK 2</li>
+                            <li class="filter__dropdownItemMobile">UK 18</li>
+                            <li class="filter__dropdownItemMobile">UK 18L</li>
+                            <li class="filter__dropdownItemMobile">UK 20</li>
+                            <li class="filter__dropdownItemMobile">UK 20L</li>
+                            <li class="filter__dropdownItemMobile">UK 20S</li>
+                            <li class="filter__dropdownItemMobile">UK 22S</li>
+                            <li class="filter__dropdownItemMobile">UK 22</li>
+                        </ul>
+                    </div>
+                    <div class="filter__openItem">
+                        <h4 class="filter__itemTitle">Price range</h4>
+                        <ul class="filter__dropdownMobile">
+                            <li class="filter__dropdownItemMobile">Not selected</li>
+                            <li class="filter__dropdownItemMobile">To £99</li>
+                            <li class="filter__dropdownItemMobile">£100 - £299</li>
+                            <li class="filter__dropdownItemMobile">From £300</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </aside>
@@ -169,11 +325,9 @@
         <div class="container container__catalogRow">
             <div class="catalog__rowItem">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo1.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo1.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -183,11 +337,9 @@
             </div>
             <div class="catalog__rowItem">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/arrival4.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/arrival4.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -197,11 +349,9 @@
             </div>
             <div class="catalog__rowItem d-mobile-none">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/arrival1.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/arrival1.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -211,11 +361,9 @@
             </div>
             <div class="catalog__rowItem d-tablet-none d-mobile-none">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo4.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo4.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -238,11 +386,9 @@
         <div class="container container__catalogRow">
             <div class="catalog__rowItem d-laptop-none d-tablet-none">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/arrival1.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/arrival1.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -252,11 +398,9 @@
             </div>
             <div class="catalog__rowItem d-laptop-none d-tablet-none">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo4.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo4.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -266,11 +410,9 @@
             </div>
             <div class="catalog__rowItem d-laptop-none d-mobile-none">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo4.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo4.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -280,15 +422,13 @@
             </div>
             <div class="catalog__rowItem d-mobile-none">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo5.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo5.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgDescr">
                         <div class="catalog__imgDescrName">Levi's</div>
                         <div class="catalog__imgDescrSub">Buyer's choice</div>
                     </div>
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -300,11 +440,9 @@
             </div>
             <div class="catalog__rowItem d-mobile-none">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo6.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo6.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -317,11 +455,9 @@
             </div>
             <div class="catalog__rowItem d-tablet-none d-mobile-none">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo7.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo7.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -333,11 +469,9 @@
             </div>
             <div class="catalog__rowItem d-tablet-none d-mobile-none">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo8.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo8.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -351,11 +485,9 @@
         <div class="container container__catalogRow d-mobile-none">
             <div class="catalog__rowItem d-laptop-none">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo7.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo7.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -367,11 +499,9 @@
             </div>
             <div class="catalog__rowItem d-laptop-none">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo8.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo8.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -383,11 +513,9 @@
             </div>
             <div class="catalog__rowItem">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/arrival3.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/arrival3.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -399,11 +527,9 @@
             </div>
             <div class="catalog__rowItem d-tablet-none">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo10.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo10.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -417,11 +543,9 @@
             </div>
             <div class="catalog__rowItem d-tablet-none">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo11.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo11.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -433,11 +557,9 @@
             </div>
             <div class="catalog__rowItem d-tablet-none">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo12.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo12.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -452,15 +574,13 @@
         <div class=" container container__catalogRow d-tablet-none d-laptop-none">
             <div class="catalog__rowItem">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo5.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo5.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgDescr">
                         <div class="catalog__imgDescrName">Levi's</div>
                         <div class="catalog__imgDescrSub">Buyer's choice</div>
                     </div>
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -472,11 +592,9 @@
             </div>
             <div class="catalog__rowItem">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo6.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo6.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -491,11 +609,9 @@
         <div class="container container__catalogRow d-tablet-none d-laptop-none">
             <div class="catalog__rowItem">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo7.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo7.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -507,11 +623,9 @@
             </div>
             <div class="catalog__rowItem">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo8.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo8.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -525,11 +639,9 @@
         <div class="container container__catalogRow d-tablet-none d-laptop-none hidden">
             <div class="catalog__rowItem">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/arrival3.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/arrival3.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -541,11 +653,9 @@
             </div>
             <div class="catalog__rowItem">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo10.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo10.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -561,11 +671,9 @@
         <div class="container container__catalogRow d-tablet-none d-laptop-none hidden">
             <div class="catalog__rowItem">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo11.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo11.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -577,11 +685,9 @@
             </div>
             <div class="catalog__rowItem">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo12.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo12.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -596,11 +702,9 @@
         <div class="container container__catalogRow d-laptop-none d-mobile-none">
             <div class="catalog__rowItem">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo10.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo10.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -614,11 +718,9 @@
             </div>
             <div class="catalog__rowItem ">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo11.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo11.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">
@@ -630,11 +732,9 @@
             </div>
             <div class="catalog__rowItem">
                 <div class="catalog__imgWrap">
-                    <a href="#">
-                        <img src="img/arrivals/photo12.jpg" alt="cloth" class="catalog__rowImg">
-                    </a>
+                    <img src="img/arrivals/photo12.jpg" alt="cloth" class="catalog__rowImg">
                     <div class="catalog__imgOverlay">
-                        <div class="catalog__imgText">View Item</div>
+                        <a href="item.html" class="catalog__imgText">View Item</a>
                     </div>
                 </div>
                 <div class="catalog__descr">

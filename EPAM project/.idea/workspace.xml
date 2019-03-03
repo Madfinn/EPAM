@@ -13,41 +13,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.46950772">
+    <splitter split-orientation="horizontal" split-proportion="0.5091441">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="start.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/start.html">
+          <file leaf-file-name="slider.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/js/slider.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="252">
-                  <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="catalog.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/catalog.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="252">
-                  <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/script.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="item.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/item.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-4444">
-                  <caret line="68" column="18" lean-forward="true" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
+                <state relative-caret-position="190">
+                  <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
                 </state>
               </provider>
             </entry>
@@ -56,20 +29,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="media-tablet.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/css/media-tablet.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="126">
-                  <caret line="326" column="4" lean-forward="true" selection-start-line="326" selection-start-column="4" selection-end-line="389" selection-end-column="5" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="media-mobile.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="media-mobile.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/media-mobile.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="243">
-                  <caret line="461" column="30" selection-start-line="461" selection-start-column="30" selection-end-line="461" selection-end-column="30" />
+                <state relative-caret-position="247">
+                  <caret line="643" column="24" selection-start-line="643" selection-start-column="24" selection-end-line="643" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -78,7 +42,34 @@
             <entry file="file://$PROJECT_DIR$/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="201">
-                  <caret line="619" column="17" selection-start-line="619" selection-start-column="1" selection-end-line="619" selection-end-column="17" />
+                  <caret line="242" column="28" selection-start-line="242" selection-start-column="24" selection-end-line="242" selection-end-column="28" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="item.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/item.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2163">
+                  <caret line="103" column="71" selection-start-line="103" selection-start-column="62" selection-end-line="103" selection-end-column="71" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="start.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/start.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="416">
+                  <caret line="110" column="21" lean-forward="true" selection-start-line="110" selection-start-column="21" selection-end-line="110" selection-end-column="21" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="item.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/item.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="189">
+                  <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
                 </state>
               </provider>
             </entry>
@@ -89,34 +80,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>border</find>
-      <find>width</find>
-      <find>caps</find>
-      <find>conta</find>
-      <find>headerM</find>
-      <find>shoes</find>
-      <find>arr</find>
-      <find>cate</find>
-      <find>header</find>
-      <find>wome</find>
-      <find>butt</find>
-      <find>arrival__b</find>
-      <find>photo5</find>
-      <find>__butt</find>
-      <find>footer</find>
-      <find>show</find>
-      <find>d-ta</find>
-      <find>hidde</find>
-      <find>item</find>
-      <find>filters</find>
-      <find>asi</find>
-      <find>cursi</find>
       <find>par</find>
       <find>catalog__bo</find>
       <find>catalog__bott</find>
       <find>catalog__b</find>
       <find />
       <find>catalog__bottom</find>
+      <find>fil</find>
+      <find>filters__mobile</find>
+      <find>filt</find>
+      <find>img</find>
+      <find>_red</find>
+      <find>red</find>
+      <find>filterMobile__iconWrap</find>
+      <find>__item</find>
+      <find>selected</find>
+      <find>poi</find>
+      <find>catalog__imgOverlay</find>
+      <find>View</find>
+      <find>btnW</find>
+      <find>buttonW</find>
+      <find>bag__bt</find>
+      <find>button</find>
+      <find>catalog__rowItem</find>
+      <find>header__wrapBag</find>
+      <find>item__img</find>
+      <find>slider</find>
+      <find>filterMobile__icon</find>
+      <find>slider__block</find>
+      <find>li</find>
+      <find>is-a</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -129,14 +122,22 @@
         <option value="$PROJECT_DIR$/img/twitter-active.svg" />
         <option value="$PROJECT_DIR$/img/facebook.svg" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/js/script.js" />
         <option value="$PROJECT_DIR$/css/media.css" />
+        <option value="$PROJECT_DIR$/img/icons/close.svg" />
+        <option value="$PROJECT_DIR$/js/filters.js" />
+        <option value="$PROJECT_DIR$/js/catalog.js" />
         <option value="$PROJECT_DIR$/catalog.html" />
-        <option value="$PROJECT_DIR$/start.html" />
+        <option value="$PROJECT_DIR$/shopping-bag.html" />
         <option value="$PROJECT_DIR$/css/media-tablet.css" />
-        <option value="$PROJECT_DIR$/item.html" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/css/media-mobile.css" />
+        <option value="$PROJECT_DIR$/js/script.js" />
+        <option value="$PROJECT_DIR$/item.html" />
+        <option value="$PROJECT_DIR$/js/item.js" />
+        <option value="$PROJECT_DIR$/img/icons/angle-left.svg" />
+        <option value="$PROJECT_DIR$/img/icons/angle-right.svg" />
+        <option value="$PROJECT_DIR$/start.html" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/js/slider.js" />
       </list>
     </option>
   </component>
@@ -149,7 +150,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1945" />
     <option name="height" value="1105" />
   </component>
@@ -169,12 +170,24 @@
             <path>
               <item name="EPAM project" type="b2602c69:ProjectViewProjectNode" />
               <item name="EPAM project" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EPAM project" type="b2602c69:ProjectViewProjectNode" />
               <item name="EPAM project" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="icons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EPAM project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EPAM project" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="slider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EPAM project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EPAM project" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -231,17 +244,18 @@
       <workItem from="1551120145857" duration="6683000" />
       <workItem from="1551204748271" duration="14364000" />
       <workItem from="1551381739504" duration="9366000" />
+      <workItem from="1551477226808" duration="40459000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83224000" />
+    <option name="totallyTimeSpent" value="123683000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10046266" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09649703" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -267,6 +281,55 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/start.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/item.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="68" column="18" lean-forward="true" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/media-tablet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6846">
+          <caret line="326" column="4" lean-forward="true" selection-start-line="326" selection-start-column="4" selection-end-line="389" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12999">
+          <caret line="619" column="17" selection-start-line="619" selection-start-column="1" selection-end-line="619" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/media-mobile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9681">
+          <caret line="461" column="30" selection-start-line="461" selection-start-column="30" selection-end-line="461" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/start.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7581">
@@ -438,52 +501,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/img/icons/close.svg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/start.html">
+    <entry file="file://$PROJECT_DIR$/shopping-bag.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+        <state relative-caret-position="176">
+          <caret line="96" column="37" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/media-tablet.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="326" column="4" lean-forward="true" selection-start-line="326" selection-start-column="4" selection-end-line="389" selection-end-column="5" />
+        <state relative-caret-position="1555">
+          <caret line="490" column="21" selection-start-line="490" selection-start-column="21" selection-end-line="490" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/item.html">
+    <entry file="file://$PROJECT_DIR$/js/catalog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4444">
-          <caret line="68" column="18" lean-forward="true" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
+        <state relative-caret-position="533">
+          <caret line="36" column="5" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+        <state relative-caret-position="276">
+          <caret line="337" column="40" selection-start-line="337" selection-start-column="24" selection-end-line="337" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/icons/angle-left.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/icons/angle-right.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/media-mobile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="643" column="24" selection-start-line="643" selection-start-column="24" selection-end-line="643" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/item.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/item.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2163">
+          <caret line="103" column="71" selection-start-line="103" selection-start-column="62" selection-end-line="103" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
-          <caret line="619" column="17" selection-start-line="619" selection-start-column="1" selection-end-line="619" selection-end-column="17" />
+          <caret line="242" column="28" selection-start-line="242" selection-start-column="24" selection-end-line="242" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/media-mobile.css">
+    <entry file="file://$PROJECT_DIR$/start.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="461" column="30" selection-start-line="461" selection-start-column="30" selection-end-line="461" selection-end-column="30" />
+        <state relative-caret-position="416">
+          <caret line="110" column="21" lean-forward="true" selection-start-line="110" selection-start-column="21" selection-end-line="110" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/slider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
         </state>
       </provider>
     </entry>
