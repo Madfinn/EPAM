@@ -15,7 +15,7 @@ a:visited {
 h1, h2, h3, h4 {
     margin: 0;
 }
-
+button
 ul {
     padding-left: 0;
     list-style: none;
@@ -182,9 +182,15 @@ main.overlay {
     right: 0;
 }
 
-.slider__arrowIcon {
+.slider__arrowIconLeft,
+.slider__arrowIconRight {
     width: 15px;
     height: auto;
+}
+
+.slider__arrowIconLeft:hover,
+.slider__arrowIconRight:hover {
+    cursor: pointer;
 }
 
 .slider__arrow:hover {
@@ -352,9 +358,13 @@ main.overlay {
     transition: all .3s ease-out;
 }
 
-.button:hover {
+.button:hover,
+.button:focus,
+.button:active {
     border-color: #f14a58;
     color: #f14a58;
+    outline: none;
+    box-shadow: none;
 }
 /*footer*/
 .footerMobile {
@@ -972,6 +982,12 @@ main.overlay {
 .bag__itemDetails {
     font: 400 12px "Roboto", sans-serif;
     margin-bottom: 10px;
+}
+
+.bag__itemColor,
+.bag__itemSize,
+.bag__itemQuantity {
+    margin-left: 10px;
 }
 
 .bag__itemDetails.last {

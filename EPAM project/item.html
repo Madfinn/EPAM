@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="css/media-tablet.css">
     <link rel="stylesheet" href="css/media-mobile.css">
     <script defer src="js/script.js"></script>
+    <script defer src="js/bag.js"></script>
     <script defer src="js/item.js"></script>
 </head>
 <body>
 <header class="header">
     <div class="container">
         <div class="header__top">
-            <a href="#" class="header__title">Template</a>
+            <a href="start.html" class="header__title">Template</a>
             <div class="header__info">
                 <div class="header__wrapEmail">
                     <a href="#" class="header__link">
@@ -28,14 +29,14 @@
                 <div class="header__wrapBag">
                     <a href="shopping-bag.html" class="header__link">
                         <img src="img/icons/shoppingBag.svg" class="header__bagIcon" alt="shopping bag">
-                        Bag (<span class="header__bagItems">0</span>)
+                        Bag (<span class="header__bagItems"></span>)
                     </a>
                 </div>
             </div>
         </div>
         <div class="header__nav">
             <nav class="menu">
-                <a href="#" class="menu__link is-active">Women</a>
+                <a href="catalog.html" class="menu__link">Women</a>
                 <a href="#" class="menu__link">Men</a>
                 <a href="#" class="menu__link">Handbags</a>
                 <a href="#" class="menu__link">Accessories</a>
@@ -54,7 +55,7 @@
 <header class="headerMobile">
     <div class="container">
         <div class="headerMobile__top">
-            <a href="#" class="headerMobile__title">TL</a>
+            <a href="start.html" class="headerMobile__title">TL</a>
             <div class="headerMobile__info">
                 <div class="headerMobile__wrapBag">
                     <a href="#" class="headerMobile__link">
@@ -131,7 +132,7 @@
                     <div class="item__color item__parameter selected">Blue</div>
                 </div>
                 <div class="item__btnWrap">
-                    <button class="item__addBtn button">Add to bag</button>
+                    <button class="item__addBtn button" id="addToBagBtn">Add to bag</button>
                 </div>
             </div>
         </div>
