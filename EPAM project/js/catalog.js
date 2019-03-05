@@ -1,9 +1,13 @@
+const body = document.getElementsByTagName("body")[0];
 const main = document.getElementsByTagName("main")[0];
 const showMoreBtn = document.getElementById("showMore");
 const catalogBlock = document.querySelectorAll(".container__catalogRow");
 const filtersMobile = document.getElementsByClassName("filters__mobile")[0];
 const filtersLaptop = document.querySelector(".filters__laptop");
 const filterItem = document.getElementsByClassName("filter__item");
+const filterHeader = document.getElementsByClassName("filter__header");
+const filterDropdown = document.getElementsByClassName("filter__dropdown");
+const filterDropdownItem = document.getElementsByClassName("filter__dropdownItem");
 const openFilterBtn = document.getElementsByClassName("filterMobile__icon")[0];
 const closeFilterBtn = document.getElementsByClassName("filters__closeIcon")[0];
 const catalog = document.getElementById("catalog");
@@ -25,7 +29,7 @@ showMoreBtn.addEventListener("click", function (e) {
 });
 
 /*Filters laptop*/
-filtersLaptop.onclick = function(event) {
+filtersLaptop.onmouseover = function(event) {
     let target = event.target;
 
     while (target !== filtersLaptop) {
@@ -35,8 +39,10 @@ filtersLaptop.onclick = function(event) {
             }
         }
         if (target.classList.contains("filter__item")) {
-            target.classList.toggle('is-show');return;
+            target.classList.add('is-show');
+            return;
         }
+
         target = target.parentNode;
     }
 };

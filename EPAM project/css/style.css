@@ -285,6 +285,13 @@ main.overlay {
     height: auto;
 }
 
+.categories__link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
 .categories__item {
     display: flex;
     justify-content: flex-end;
@@ -579,6 +586,8 @@ main.overlay {
     top: 73px;
     display: none;
     z-index: 1;
+    padding-left: 0;
+    list-style-position: inside;
 }
 
 .filter__dropdownItem {
@@ -591,6 +600,10 @@ main.overlay {
 
 .filter__dropdownItem:hover {
     background-color: #f7f7f7;
+    color: #f14a58;
+}
+
+.filter__dropdownItem.selected {
     color: #f14a58;
 }
 

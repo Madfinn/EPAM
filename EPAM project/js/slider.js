@@ -14,15 +14,16 @@ for(let i = 0; i < sliderImg.length; i++) {
 const paginationItem = document.getElementsByClassName("slider__paginationItem");
 
 let carousel;
+
+window.onload = function () {
+    startCarouselWithInterval();
+};
+
 function startCarouselWithInterval() {
     carousel = setInterval(startCarousel, 5000);
 };
 function stopCarousel() {
     clearInterval(carousel);
-};
-
-window.onload = function () {
-    startCarouselWithInterval();
 };
 
 function startCarousel () {
@@ -45,18 +46,6 @@ function startCarousel () {
             break;
         }
     }
-};
-
-/*
-var add;
-var input = document.getElementById("input");
-function start() {
-    add = setInterval("input.value++",1000);
-}start();
- */
-
-window.onload = function () {
-  startCarousel();
 };
 
 slider.onclick = function(event) {
