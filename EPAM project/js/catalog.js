@@ -47,6 +47,21 @@ filtersLaptop.onmouseover = function(event) {
     }
 };
 
+
+for(let i = 0; i < filterItem.length; i++) {
+    for(let j = 0; j < filterDropdown[i].children.length; j++) {
+        let item = filterDropdown[i].children;
+        for(let k = 0; k < item.length; k++) {
+            console.log("!!!" + item[k].textContent);
+            let headerText = filterItem[i].getElementsByClassName("filter__header")[0];
+            console.log("&&&" + headerText);
+            if (headerText.textContent.toLowerCase() === item[k].textContent.toLowerCase()) {
+                item[k].classList.add("selected");
+            }
+        }
+    }
+}
+
 /*Filters mobile*/
 openFilterBtn.addEventListener("click", function () {
     filtersMobile.classList.add("is-show");

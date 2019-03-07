@@ -372,6 +372,7 @@ main.overlay {
     color: #f14a58;
     outline: none;
     box-shadow: none;
+    cursor: pointer;
 }
 /*footer*/
 .footerMobile {
