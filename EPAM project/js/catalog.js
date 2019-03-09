@@ -42,8 +42,10 @@ filtersLaptop.onmouseover = function(event) {
             target.classList.add('is-show');
             return;
         }
-
         target = target.parentNode;
+    }
+    if(!target) {
+        return;
     }
 };
 
@@ -52,11 +54,24 @@ for(let i = 0; i < filterItem.length; i++) {
     for(let j = 0; j < filterDropdown[i].children.length; j++) {
         let item = filterDropdown[i].children;
         for(let k = 0; k < item.length; k++) {
-            console.log("!!!" + item[k].textContent);
             let headerText = filterItem[i].getElementsByClassName("filter__header")[0];
-            console.log("&&&" + headerText);
             if (headerText.textContent.toLowerCase() === item[k].textContent.toLowerCase()) {
                 item[k].classList.add("selected");
+            }
+        }
+    }
+}
+
+for(let i = 0; i < filterItem.length; i++) {
+    filterItem[i].onclick = function (event) {
+        let target = event.target;
+
+        if(target.classList.contains("filter__dropdownItem")) {
+            for(let j = 0; j < filterDropdown[i].children.length; j++) {
+                filterDropdown[i].children[j].classList.remove("selected");
+                filterHeader[i].textContent = target.textContent;
+                target.classList.add("selected");
+
             }
         }
     }
@@ -81,7 +96,6 @@ catalog.onclick = function(event) {
         if (target.classList.contains("catalog__imgText")) {
             target = target.parentNode.parentNode.parentNode;
             catalogItemArray.push(target);
-            console.log(target);
             catalogItemArray[i].title = target.children[1].children[0].textContent;
             catalogItemArray[i].price = target.children[1].children[1].textContent;
             catalogItemArray[i].img = target.children[0].children[0].src;

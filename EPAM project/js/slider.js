@@ -20,7 +20,7 @@ window.onload = function () {
 };
 
 function startCarouselWithInterval() {
-    carousel = setInterval(startCarousel, 5000);
+    carousel = setInterval(startCarousel, 10000);
 };
 function stopCarousel() {
     clearInterval(carousel);
@@ -29,7 +29,6 @@ function stopCarousel() {
 function startCarousel () {
     for (let i = 0; i < sliderImg.length; i++) {
         if (sliderImg[i].classList.contains("is-active")) {
-            console.log(i);
             sliderImg[i].classList.remove("is-active");
             paginationItem[i].classList.remove("is-active");
 
@@ -54,7 +53,6 @@ slider.onclick = function(event) {
     if(target.classList.contains("left") || target.classList.contains("slider__arrowIconLeft")) {
         for(let i = sliderImg.length - 1; i >= 0  ; i--) {
             if (sliderImg[i].classList.contains("is-active")) {
-                console.log(i);
                 sliderImg[i].classList.remove("is-active");
                 paginationItem[i].classList.remove("is-active");
                 if(i == 0) {
@@ -75,7 +73,6 @@ slider.onclick = function(event) {
     if(target.classList.contains("right") || target.classList.contains("slider__arrowIconRight")) {
         for(let i = 0; i < sliderImg.length ; i++) {
             if (sliderImg[i].classList.contains("is-active")) {
-                console.log(i);
                 sliderImg[i].classList.remove("is-active");
                 paginationItem[i].classList.remove("is-active");
 

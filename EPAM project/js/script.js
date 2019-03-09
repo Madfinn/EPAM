@@ -3,6 +3,21 @@ const searchField = document.getElementById("search");
 const navigationMenu = document.getElementById("navigationMenu");
 const hamburger = document.getElementById("hamburger");
 
+const bagCountItems = document.getElementsByClassName("header__bagItems")[0];
+let storageItems = JSON.parse(localStorage.getItem("Item"));
+let bagHeader;
+let storedBagHeader = JSON.parse(localStorage.getItem("bagHeader"));
+
+if(storageItems) {
+    bagHeader = storageItems;
+    bagCountItems.textContent = storedBagHeader.length;
+} else {
+    bagHeader = 0;
+    bagCountItems.textContent = bagHeader;
+}
+
+localStorage.setItem("bagHeader", JSON.stringify(bagHeader));
+
 searchGlass.addEventListener("click", function (e) {
     e.preventDefault();
     searchField.classList.toggle("is-show");
@@ -19,7 +34,6 @@ hamburger.addEventListener("click", function (e) {
         main.classList.remove("overlay");
     }
 });
-
 
 
 

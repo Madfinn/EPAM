@@ -9,10 +9,8 @@ const itemColor = document.getElementsByClassName("item__color");
 let titleFromStorage = localStorage.getItem("Title");
 let priceFromStorage = localStorage.getItem("Price");
 let photoFromStorage = localStorage.getItem("Photo");
-const storageItems = [];
-/*const bagCountItems = document.getElementsByClassName("header__bagItems")[0];
-bagCountItems.textContent = shoppingBag.items.length;
-console.log(shoppingBag);*/
+storageItems = JSON.parse(localStorage.getItem("bagHeader"));
+console.log("storageItems" + storageItems);
 
 for(let j = 0; j < itemParameter.length; j++) {
     itemParameter[j].onclick = function (event) {
@@ -38,7 +36,6 @@ for(let j = 0; j < itemParameter.length; j++) {
  };
 
 const quotes = new RegExp('\"', 'g');
-const priceRegExp = new RegExp('\"|[\w][\D]\"$','g');
 itemTitle.innerHTML = titleFromStorage.replace(quotes, "");
 for(let i = 0; i < itemPrice.length; i++) {
     itemPrice[i].innerHTML = priceFromStorage.replace(quotes, "");
@@ -91,6 +88,13 @@ addToBagBtn.addEventListener("click", function () {
 
     let item = new shopItem;
     storageItems.push(item);
-    console.log("storageItems" + storageItems);
     localStorage.setItem("Item", JSON.stringify(storageItems));
+
+    const bagHeader = storageItems;
+    localStorage.setItem("bagHeader", JSON.stringify(bagHeader));
+    let storedBagHeader = JSON.parse(localStorage.getItem("bagHeader"));
+    bagCountItems.textContent = storedBagHeader.length;
+
+    storedBagHeader = item;
+    bagCountItems.textContent = storedBagHeader.length;
 });
