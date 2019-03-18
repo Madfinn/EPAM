@@ -1,5 +1,9 @@
 const bagContainer = document.getElementsByClassName("bag__topContainer")[0];
 const bagBody = document.getElementById("bagBody");
+const emptyBag = document.getElementsByClassName("bag__emptyLink")[0];
+const emptyBagText = document.getElementsByClassName("bag_empty")[0];
+const buyNowText = document.getElementsByClassName("bag_buy")[0];
+const buyBtn = document.getElementById("buyNow");
 let bagItem;
 let totalPrice = document.getElementById("price");
 
@@ -50,6 +54,23 @@ if(bagBody) {
             }
         }
     }
+
+    emptyBag.onclick = function (event) {
+        event.preventDefault();
+        for (let i = bagItem.length - 1; i >= 0; i--) {
+            bagContainer.removeChild(bagContainer.children[i]);
+        }
+
+        emptyBagText.classList.remove("d-none");
+    };
+
+    buyBtn.addEventListener("click", function () {
+        for (let i = bagItem.length - 1; i >= 0; i--) {
+            bagContainer.removeChild(bagContainer.children[i]);
+        }
+
+        buyNowText.classList.remove("d-none");
+    });
 };
 
 let quantity = 0;
@@ -151,6 +172,9 @@ function renderBagItem() {
                     }
                 }
             }
+
+            emptyBagText.classList.add("d-none");
+            buyNowText.classList.add("d-none");
         }
     });
 }
@@ -168,5 +192,7 @@ function getTotalPriceInBag() {
         }
         console.log(price);
     });
+    price *= 10;
+    price = new Intl.NumberFormat().format(price);
     return totalPrice.textContent = "£ " + price;
 };

@@ -9,7 +9,11 @@ const itemColor = document.getElementsByClassName("item__color");
 let titleFromStorage = localStorage.getItem("Title");
 let priceFromStorage = localStorage.getItem("Price");
 let photoFromStorage = localStorage.getItem("Photo");
-storageItems = JSON.parse(localStorage.getItem("bagHeader"));
+if(!bagHeader) {
+    storageItems = [];
+} else {
+    storageItems = JSON.parse(localStorage.getItem("bagHeader"));
+}
 console.log("storageItems" + storageItems);
 
 for(let j = 0; j < itemParameter.length; j++) {
@@ -87,6 +91,7 @@ addToBagBtn.addEventListener("click", function () {
     }
 
     let item = new shopItem;
+    console.log("item" + item);
     storageItems.push(item);
     localStorage.setItem("Item", JSON.stringify(storageItems));
 
